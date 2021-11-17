@@ -1,16 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .flex {
     display: flex;
     justify-content: center;
     flex-direction: row;
     gap: 2rem;
     padding: 2rem;
+    background-color: #F3D9B1;
 }
 
 .section {
     display: flex;
     flex-direction: column;
     width: 30%;
-    gap:2rem
+    gap:2rem;
 }
 
 .sectionDiv {
@@ -18,13 +25,12 @@
     padding: 0 1rem;
     line-height: 3;
     font-size: 1rem;
+    background-color: white;
 }
 
 .sectionDiv h2 {
     text-align: center;
 }
-
-
 
 .sectionDiv div {
     display: flex;
@@ -44,3 +50,4 @@
         width: 90%;
     }
 }
+
