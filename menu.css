@@ -60,3 +60,17 @@ html, body, .section1  {
     }
 }
 
+.priceDiv {
+    display: flex;
+    align-items: center;
+}
+
+.sectionDiv button {
+    font-size: 3rem;
+    color: #A8C256;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    margin-left: .7rem;
+    cursor: pointer;
+}
