@@ -1,0 +1,29 @@
+section {
+    margin-top: 25px;
+    width: 100%;
+}
+
+.content {
+    margin: 0 auto;
+    width: 85%;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 250%;
+}
+
+.featured {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.featured h2 {
+    text-align: center;
+}
+
+.featured img {
+    width: 100%;
+}
