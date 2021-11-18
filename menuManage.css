@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 .flex {
     display: flex;
     justify-content: center;
@@ -28,7 +27,8 @@
 
 .sectionDiv {
     border: 1px solid black;
-    padding: .5rem 1rem;
+    padding: 0 1rem;
+    line-height: 3;
     font-size: 1rem;
     background-color: white;
 }
@@ -37,12 +37,12 @@
     text-align: center;
 }
 
-.sectionDiv div {
+.sectionDiv div:not(.addItem) {
     display: flex;
     justify-content: space-between;
 }
 
-.sectionDiv>div:not(.sectionDiv div:last-of-type) {
+.sectionDiv div:not(.sectionDiv div:last-of-type) {
     border-bottom: 1px solid black;
 }
 
@@ -61,7 +61,17 @@
     align-items: center;
 }
 
-.sectionDiv button:not(.x) {
+.xButton {
+    font-size: 2.3rem;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    margin-left: .7rem;
+    cursor: pointer;
+}
+
+.addBtn {
     font-size: 3rem;
     color: #A8C256;
     font-weight: bold;
@@ -71,18 +81,7 @@
     cursor: pointer;
 }
 
-.x {
-    font-size: 1.5rem;
-    color: red;
-    font-weight: bold;
-    background-color: white;
-    border: none;
-    cursor: pointer;
-    text-transform: uppercase;
-    margin-right: .5rem;
-}
-
-.xFlex {
+.addItem {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
