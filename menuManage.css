@@ -1,0 +1,88 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #F3D9B1;
+}
+
+.full {
+    height: 100%;
+}
+
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap:2rem;
+}
+
+.sectionDiv {
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.sectionDiv h2 {
+    text-align: center;
+}
+
+.sectionDiv div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionDiv>div:not(.sectionDiv div:last-of-type) {
+    border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 768px) {
+    .flex:not(.no) {
+        flex-direction: column;
+        align-items: center;
+    }
+    .section {
+        width: 90%;
+    }
+}
+
+.priceDiv {
+    display: flex;
+    align-items: center;
+}
+
+.sectionDiv button:not(.x) {
+    font-size: 3rem;
+    color: #A8C256;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    margin-left: .7rem;
+    cursor: pointer;
+}
+
+.x {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-right: .5rem;
+}
+
+.xFlex {
+    display: flex;
+    align-items: center;
+}
