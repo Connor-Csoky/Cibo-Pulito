@@ -1,7 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #F3D9B1;
+}
+
+.headTitle {
+    letter-spacing: 5px;
+    font-size: 320%;
+    font-family: 'Dancing Script', cursive;
 }
 
 header {
@@ -15,7 +27,7 @@ header {
     border-bottom: 1px solid black;
 }
 
-header .links {
+.links {
     width: 80%;
     margin: 0 auto;
     display: grid;
