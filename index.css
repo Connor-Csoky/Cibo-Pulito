@@ -57,7 +57,6 @@ section {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 15px;
     justify-content: center;
-    justify-content: center;
     background-color: #ffcaa2;
     border: 1px solid black;
     margin-top: 25px;
@@ -66,6 +65,7 @@ section {
 
 .reviewsItems>div {
     border: 3px solid black;
+    height: fit-content;
 }
 
 .reviewsItems div * {
@@ -86,4 +86,4 @@ section {
     .span {
         grid-column: 1 / span 2;
     }
-}
+}    
