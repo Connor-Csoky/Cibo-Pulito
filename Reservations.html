@@ -32,10 +32,10 @@
                     <input type="text">
                     <p>Email</p>
                     <input type="text">
-                    <p>Subject</p>
-                    <input type="text">
+                    <p>Reservation Time</p>
+                    <input type="datetime-local">
                     <p>Message</p>
-                    <textarea>Write your message here..</textarea>
+                    <textarea></textarea>
                     <button class="button-style">Send Message</button>
                 </div>
         </section>
@@ -45,7 +45,7 @@
         </footer>
 
         <style>
-                    .contact-flex {
+            .contact-flex {
             display:flex;
             justify-content: center;
         }
@@ -59,17 +59,22 @@
             padding: 10px 30px;
             line-height: 1.5;
             cursor: pointer;
+            justify-content: center;
         }
 
         textarea {
             display: block;
-            border-radius: 20px;
             padding: 10px;
-            border: 1px solid #ced4da;
+            border: 1px solid black;
             width: 100%;
             font-family: "Roboto", "Helvetica", "Sans-serif";
             font-size: 1rem;
             color:#495057;
+            resize:none;
+        }
+
+        input {
+            width: 200px;
         }
         </style>
 
