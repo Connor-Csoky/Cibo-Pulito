@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-html, body, .section1  {
-    height: 100%;
-}
-
 .flex {
     display: flex;
     justify-content: center;
@@ -65,7 +61,12 @@ html, body, .section1  {
     align-items: center;
 }
 
-.sectionDiv button {
+.addItem {
+    display: flex;
+    justify-content: center;
+}
+
+.plusButton {
     font-size: 3rem;
     color: #A8C256;
     font-weight: bold;
