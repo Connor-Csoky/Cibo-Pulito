@@ -22,7 +22,7 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 
-header {
+header, footer {
     padding: 25px;
     background-color: #ffcaa2;
     display: flex;
@@ -36,18 +36,18 @@ header {
 .links {
     width: 80%;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 1fr;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
     grid-column-gap: 15px;
 }
 
-header a{
+.links a, header a{
     text-decoration: none;
     font-size: 25px;
+    transition: font-size 250ms;
 }
 
 header .top {
@@ -63,11 +63,11 @@ header img {
     height: auto;
 }
 
-header a:link, header a:visited {
+.links a:link, .links a:visited, header a:link, header a:visited {
     color: #2E294E;
 }
 
-header a:hover, header a:active {
+.links a:hover, .links a:active, header a:hover, header a:active {
     color: #00a2ff;
 }
 
@@ -87,14 +87,31 @@ header .loginButt ion-icon {
     background-color: white;
 }
 
+footer {
+    border-bottom:unset;
+    border-top: 1px solid black;
+    margin-top: 55px;
+    padding-bottom: 25px;
+}
+
+.footer {
+    width: 100%;
+}
+
+.footer p {
+    margin-top: 15px;
+    color: rgb(90, 90, 90);
+    text-align: center;
+}
+
 @media screen and (max-width: 750px) {
-    header .links {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;        
+    .links a {
+        font-size: 20px;
     }
 
-    header a{
-        font-size: 20px;
+    header .loginButt {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
