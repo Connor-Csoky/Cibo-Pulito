@@ -87,10 +87,22 @@
     padding: 1rem;
 }
 
-#dont {
-    border-bottom: none;
+.dont {
+    border-bottom: none !important;  
 }
 
 .sectionDiv ion-icon {
     margin-left: 1rem;
+}
+
+ion-icon {
+    font-size: 1.2rem;
+}
+
+ion-icon[name="leaf"] {
+    color: green;
+}
+
+ion-icon[name="flame"] {
+    color: red;
 }
