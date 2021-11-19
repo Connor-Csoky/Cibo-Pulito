@@ -50,8 +50,8 @@
     display: flex;
     justify-content: space-between;
 }
-#dont {
-    border-bottom: none ;
+.dont {
+    border-bottom: none !important;  
 }
 .sectionDiv div:not(.sectionDiv div:last-of-type)  {
     border-bottom: 1px solid black;
@@ -109,4 +109,16 @@
 
 .no {
     padding: 1rem;
+}
+
+ion-icon {
+    font-size: 1.2rem;
+}
+
+ion-icon[name="leaf"] {
+    color: green;
+}
+
+ion-icon[name="flame"] {
+    color: red;
 }
