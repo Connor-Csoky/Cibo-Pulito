@@ -28,25 +28,30 @@
 .sectionDiv {
     border: 1px solid black;
     padding: 0 1rem;
-    line-height: 3;
     font-size: 1rem;
     background-color: #f9d2aa;
 }
 
 .sectionDiv h2 {
     text-align: center;
+    border-bottom: 5px double black;
+    width: 80%;
+    margin: 0 auto;
+    line-height: 2.5;
 }
 
 .sectionDiv div {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    padding: .3rem;
 }
 
 .sectionDiv div:not(.sectionDiv div:last-of-type) {
     border-bottom: 1px solid black;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
     .flex:not(.no) {
         flex-direction: column;
         align-items: center;
@@ -76,4 +81,16 @@
     cursor: pointer;
     text-shadow: 1px 1px 5px black
     /* -webkit-text-stroke: 5px black; */
+}
+
+.no {
+    padding: 1rem;
+}
+
+#dont {
+    border-bottom: none;
+}
+
+.sectionDiv ion-icon {
+    margin-left: 1rem;
 }
