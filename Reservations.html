@@ -24,23 +24,26 @@
             </nav>
         </header>
         
-        <section>
-            <h1 style="padding-top: 10px;"><center>Reservations</center></h1>
-            <div class="contact-flex">
-                <div>
-                    <h2 style="padding-bottom:25px; padding-top:25px;">Make a reservation</h2>
-                    <p>Name</p>
-                    <input type="text">
-                    <p style="padding-top: 25px;">Email</p>
-                    <input type="text">
-                    <p style="padding-top: 25px;">Reservation Time</p>
-                    <input type="datetime-local">
-                    <p style="padding-top: 25px;">Message</p>
-                    <textarea></textarea>
-                    <div style="padding-top: 25px; padding-bottom:25px; margin: 0 auto; text-align:center;">
-                    <button class="button-style">Send Message</button>
+        <section style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(IMGS/MeatLoversSalad.jpg); background-repeat: no-repeat; background-size: cover;">
+            <div>
+                <div class="contact-flex">
+                    <div style="background-color:#F3D9B1; width: 750px;">
+                        <h1 style="padding-top: 10px;"><center>Reservations</center></h1>
+                        <h2 style="padding-bottom:25px; padding-top:25px;"><center>Make a Reservation</center></h2>
+                        <p><center>Name</center></p>
+                        <center><input type="text"></center>
+                        <p style="padding-top: 25px;"><center>Email</center></p>
+                        <center><input type="text"></center>
+                        <p style="padding-top: 25px;"><center>Reservation Time</center></p>
+                        <center><input type="datetime-local"></center>
+                        <p style="padding-top: 25px;"><center>Message</center></p>
+                        <center><textarea></textarea></center>
+                        <div style="padding-top: 25px; padding-bottom:25px; margin: 0 auto; text-align:center;">
+                            <center><button class="button-style">Send Message</button></center>
+                        </div>
                     </div>
-                </div>
+                </div> 
+            </div>       
         </section>
         
         <footer>
@@ -48,38 +51,39 @@
         </footer>
 
         <style>
+
             .contact-flex {
-            display:flex;
-            justify-content: center;
-        }
+                display:flex;
+                justify-content: center;
+            }
 
-        button.button-style {
-            background:#ffcaa2;
-            border: 1px solid black;
-            color: #2E294E;
-            font-size: 16px;
-            border-radius: 30px;
-            padding: 10px 30px;
-            line-height: 1.5;
-            cursor: pointer;
-            justify-content: center;
-            margin: 0 auto;
-        }
+            button.button-style {
+                background:#ffcaa2;
+                border: 1px solid black;
+                color: #2E294E;
+                font-size: 16px;
+                border-radius: 30px;
+                padding: 10px 30px;
+                line-height: 1.5;
+                cursor: pointer;
+                justify-content: center;
+                margin: 0 auto;
+            }
 
-        textarea {
-            display: block;
-            padding: 10px;
-            border: 1px solid black;
-            width: 100%;
-            font-family: "Roboto", "Helvetica", "Sans-serif";
-            font-size: 1rem;
-            color:#495057;
-            resize:none;
-        }
+            textarea {
+                display: block;
+                padding: 10px;
+                border: 1px solid black;
+                width: 50%;
+                font-family: "Roboto", "Helvetica", "Sans-serif";
+                font-size: 1rem;
+                color:#495057;
+                resize:none;
+            }
 
-        input {
-            width: 200px;
-        }
+            input {
+                width: 200px;
+            }
         </style>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
