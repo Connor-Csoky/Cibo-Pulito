@@ -1,0 +1,53 @@
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: #ffcaa2;
+    border: 1px solid black;
+    width: 80% ;
+    margin: 1rem auto;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.content {
+    text-align: center;
+}
+
+.size {
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.receipt {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    padding: 1rem;
+    width: 20%;
+    text-align: center;
+}
+
+.priceDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashed {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: .3rem;
+    border-top: 1px dashed black;
+    border-bottom: 1px dashed black;
+    padding: .5rem 0;
+    margin: 1rem 0;
+}
