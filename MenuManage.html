@@ -52,7 +52,7 @@
                         </div>
                         <div class="addItem">
                             <p class="sectionDiv-P">Add an Item to the Menu</p>
-                            <div class="priceDiv"><button class="addBtn">+</button> </div> 
+                            <div class="priceDiv"><button class="addBtn" id="btn1">+</button> </div> 
                         </div>
                         
                     </div>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="addItem">
                             <p class="sectionDiv-P">Add an Item to the Menu</p>
-                            <div class="priceDiv"><button class="addBtn">+</button> </div> 
+                            <div class="priceDiv"><button class="addBtn" id="btn2">+</button> </div> 
                         </div>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                         </div>
                         <div class="addItem">
                             <p class="sectionDiv-P">Add an Item to the Menu</p>
-                            <div class="priceDiv"><button class="addBtn">+</button> </div> 
+                            <div class="priceDiv"><button class="addBtn" id="btn3">+</button> </div> 
                         </div>
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="addItem">
                             <p class="sectionDiv-P">Add an Item to the Menu</p>
-                            <div class="priceDiv"><button class="addBtn">+</button> </div> 
+                            <div class="priceDiv"><button class="addBtn" id="btn4">+</button> </div> 
                         </div>
                     </div>
                     <div class="sectionDiv">
@@ -169,7 +169,7 @@
                         </div>
                         <div class="addItem">
                             <p class="sectionDiv-P">Add an Item to the Menu</p>
-                            <div class="priceDiv"><button class="addBtn">+</button> </div> 
+                            <div class="priceDiv"><button class="addBtn" id="btn5">+</button> </div> 
                         </div>
                     </div>
                 </div>
@@ -194,6 +194,17 @@
             </div>
         </footer>
 
+        <div class="bg-modal">
+            <div class="modal">
+                <h2>Add an Item to the Menu</h2>
+                <input class="orderInput itemName" type="text" placeholder="Item Name">
+                <input class="orderInput itemPrice" type="text" placeholder="Price">
+                <div><button class="spicy">Spicy</button><button class="veggy">Vegetarian</button></div>
+                <div><button class="btnOrder">Create</button><button class="btnClose">Cancel</button></div>
+            </div>
+        </div>
+
+        <script src="menumanage.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
