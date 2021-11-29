@@ -2,6 +2,11 @@
     <head>
         <link rel="stylesheet" type="text/css" href="headFoot.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="authentication.css">
+        <script src="authentication.js"></script>
+
+        <title>Cibo Pulito - Login</title>
     </head>
     <body>
         <header>
@@ -23,9 +28,26 @@
                 <a href="ReceiptManage.html" class="manageOnly">Manage Receipts</a>
             </nav>
         </header>
-        
-        <section>
 
+        <section>
+            <div class="content">
+                <h2 class="loginsignup">Login</h2>
+                <form class="form">
+                    <label>Username</label>
+                    <input type="text" placeholder="Username" name="login" class="test username" required>
+
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" name="login" class="test password" required>
+
+                    <div class="confirm hidden">
+                        <label>Confirm Password</label>
+                        <input type="password" placeholder="Confirm Password" name="login" class="test passwordConf" required>    
+                    </div>
+                    <a href="#" class="signup">Click here to Register</a>
+
+                    <input type="submit" name="login" value="Login" class="submit" disabled required>
+                </form>
+            </div>
         </section>
         
         <footer>

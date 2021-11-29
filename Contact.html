@@ -3,6 +3,7 @@
         <link rel="stylesheet" type="text/css" href="headFoot.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="contact.css">
+        <title>Cibo Pulito - Contact</title>
     </head>
     <body>
         <header>
@@ -32,14 +33,15 @@
                 </div>
                 <form class="form">
                     <label>Full Name</label>
-                    <input type="text" placeholder="First and Last name">
+                    <input type="text" placeholder="First and Last name" name="contact" required>
 
                     <label>Email</label>
-                    <input type="email" placeholder="Email">
+                    <input type="email" placeholder="Email" name="contact" required>
 
                     <label>Message</label>
-                    <textarea placeholder="Type a message for the owner"></textarea>
+                    <textarea placeholder="Type a message for the owner" name="contact" required></textarea>
                     
+                    <input type="submit" name="contact" class="submit" required>
                 </form>
             </div>
         </section>
