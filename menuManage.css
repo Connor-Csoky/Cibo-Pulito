@@ -150,5 +150,6 @@ ion-icon[name="flame"] {
 
 .modal div {
     display: flex;
+    align-items: center;
     gap: 2rem;
 }

@@ -198,8 +198,8 @@
             <div class="modal">
                 <h2>Add an Item to the Menu</h2>
                 <input class="orderInput itemName" type="text" placeholder="Item Name">
-                <input class="orderInput itemPrice" type="text" placeholder="Price">
-                <div><button class="spicy">Spicy</button><button class="veggy">Vegetarian</button></div>
+                <input class="orderInput itemPrice" type="number" max="40" step="0.01" placeholder="Price">
+                <div><label for="spicy">Spicy</label><input type="checkbox" class="spicy"></input><label for="veggy">Vegetarian</label><input type="checkbox" class="veggy"></input></div>
                 <div><button class="btnOrder">Create</button><button class="btnClose">Cancel</button></div>
             </div>
         </div>
