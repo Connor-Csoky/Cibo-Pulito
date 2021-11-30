@@ -3,7 +3,7 @@ $( document ).ready(function() {
     let login = true;
     $('.signup').click(function(){
         if(login == true){ // Signup button clicked, modify form attributes to support Signup
-            $('.confirm').removeClass('hidden');
+            $('.confirm').append('')
             $('.signup').text('Click here to Login');
             $('.test').val('');
             $('.submit').prop('disabled', true);
@@ -12,7 +12,7 @@ $( document ).ready(function() {
             $('.submit').val('Signup')
             login = false;
         }else if(login == false){ // Login button clicked, reset all forms to default
-            $('.confirm').addClass('hidden');
+            $('.confirm').child().remove()
             $('.signup').text('Click here to Register');
             $('.test').val('');
             $('.submit').prop('disabled', true);
@@ -29,12 +29,14 @@ $( document ).ready(function() {
             }else{
                 $('.submit').prop('disabled', true);
             }
+            console.log('testing signup')
         }else if(login == true) { // If page is set to LOGIN then check if all forms have content
             if($('.username').val() != '' && $('.username').val() != ' ' && $('.password').val() != '' && $('.password').val() != ' '){
                 $('.submit').prop('disabled', false);
             }else{
                 $('.submit').prop('disabled', true);
             }
+            console.log('testing login')
         }else{
             $('.submit').prop('disabled', true);
         }
