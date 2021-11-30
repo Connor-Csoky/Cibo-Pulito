@@ -88,10 +88,12 @@ header .loginButt ion-icon {
 }
 
 footer {
+    position: relative;
+    height: 120px;
     border-bottom:unset;
     border-top: 1px solid black;
-    margin-top: 55px;
-    padding-bottom: 25px;
+    padding: 25px 0;
+    margin-top: 150px;
 }
 
 .footer {
