@@ -3,7 +3,8 @@ $( document ).ready(function() {
     let login = true;
     $('.signup').click(function(){
         if(login == true){ // Signup button clicked, modify form attributes to support Signup
-            $('.confirm').append('')
+            $('.confirm').removeClass('hidden');
+            $('.confirm').addClass('required');
             $('.signup').text('Click here to Login');
             $('.test').val('');
             $('.submit').prop('disabled', true);
@@ -12,7 +13,8 @@ $( document ).ready(function() {
             $('.submit').val('Signup')
             login = false;
         }else if(login == false){ // Login button clicked, reset all forms to default
-            $('.confirm').child().remove()
+            $('.confirm').addClass('hidden');
+            $('.confirm').removeClass('required');
             $('.signup').text('Click here to Register');
             $('.test').val('');
             $('.submit').prop('disabled', true);
