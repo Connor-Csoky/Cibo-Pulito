@@ -110,6 +110,10 @@ footer {
     color: #00a2ff !important;
 }
 
+.manageOnly {
+    display: none;
+}
+
 @media screen and (max-width: 750px) {
     .links a {
         font-size: 20px;
