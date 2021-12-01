@@ -11,6 +11,7 @@ $( document ).ready(function() {
             $('.loginsignup').text('Signup');
             $('title').text('Cibo Pulito - Signup')
             $('.submit').val('Signup')
+            $('.submit').attr('onclick', 'createItem()')
             login = false;
         }else if(login == false){ // Login button clicked, reset all forms to default
             $('.confirm').addClass('hidden');
@@ -21,6 +22,7 @@ $( document ).ready(function() {
             $('.loginsignup').text('Login');
             $('title').text('Cibo Pulito - Login')
             $('.submit').val('Login')
+            $('.submit').attr('onclick', 'findItem()')
             login = true;
         };
     });
@@ -44,3 +46,17 @@ $( document ).ready(function() {
         }
     })
 });
+
+    
+
+    function createItem() {
+        localStorage.setItem($('.username').val(), $('.password').val())
+    }
+
+    function findItem() {
+        localStorage.getItem($('.username').val(), $('.password').val())
+    }
+    
+    // function createItem() {
+    //     localStorage.setItem('test', 'test')
+    // }
