@@ -49,14 +49,25 @@ $( document ).ready(function() {
 
     
 
-    function createItem() {
-        localStorage.setItem($('.username').val(), $('.password').val())
-    }
+function createItem() {
+    let user = $('.username').val()
+    user = user.toLowerCase();
+    localStorage.setItem(user, $('.password').val())
+}
 
-    function findItem() {
-        localStorage.getItem($('.username').val(), $('.password').val())
-    }
+function findItem() {
+    let user = $('.username').val();
+    user = user.toLowerCase();
+    let passCheck = localStorage.getItem(user)
+    let pass = $('.password').val();
     
-    // function createItem() {
-    //     localStorage.setItem('test', 'test')
-    // }
+    if(passCheck != null) {
+        window.alert('Checking')
+        if(passCheck === pass){
+            window.alert('Login Success')
+        }
+    }else{
+        window.alert("Failed Login");
+        window.alert(passCheck)
+    }
+}
