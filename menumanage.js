@@ -42,8 +42,6 @@ function xButt() {
     });
 };
 
-
-
 const items = {
 
     'drinks': [{
@@ -93,7 +91,78 @@ const items = {
         "price": 9.99,
         "isSpicy": false,
         "isVeggy": false,
-    }],// End of Pizza Section
+    }], // End of Pizza Section
+  
+   'main' : [{
+        "name" : "Caponata",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Chicken Florentine Pasta",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Pasta Fagioli al Forno",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Bellini",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Pizzette with Prawns",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Chicken Parmesan",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Italian Meatball",
+        "price" : 9.99,
+        "isSpicy" : true,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Calzone",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Caprese Chicken",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Rosemary Mushroom Risotto",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    }
+    ], // End of Main Section
 
     "app" : [{
         "name" : "Mozzerella Sticks",
@@ -134,4 +203,3 @@ const items = {
     }] // End of Salad Section
 
 }
-
