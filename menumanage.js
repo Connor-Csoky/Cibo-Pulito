@@ -41,3 +41,76 @@ function xButt() {
         $(this).parent().parent().remove()
     });
 };
+
+const items = {
+    'main' : [{
+        "name" : "Caponata",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Chicken Florentine Pasta",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Pasta Fagioli al Forno",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Bellini",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Pizzette with Prawns",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Chicken Parmesan",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Italian Meatball",
+        "price" : 9.99,
+        "isSpicy" : true,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Calzone",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Caprese Chicken",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+
+    {
+        "name" : "Rosemary Mushroom Risotto",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    }
+    ]
+}
