@@ -1,14 +1,16 @@
 $(document).ready(function(){
 
-    let items;
-    console.log(JSON.parse(localStorage.getItem("menuDefault")))
-    if(JSON.parse(localStorage.getItem("menuDefault")) == "" || JSON.parse(localStorage.getItem("menuDefault")) == null) {
-        localStorage.setItem("items", JSON.stringify(menuDefault));
+    let items; 
 
-        items = JSON.parse(localStorage.getItem("menuDefault") || "[]")
+    items = JSON.parse(localStorage.getItem("items") || "[]")
+    if (items.length == 0 || null){
+        localStorage.setItem("items", JSON.stringify(menuDefault));
+        items = JSON.parse(localStorage.getItem("items") || "[]")
     }
-    
-    
+    else{
+
+    }
+
     let button
     xButt() 
     $('.addBtn').click(function() {
