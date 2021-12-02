@@ -41,3 +41,46 @@ function xButt() {
         $(this).parent().parent().remove()
     });
 };
+
+
+
+const items = {
+    "app" : [{
+        "name" : "Mozzerella Sticks",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    },
+    {
+        "name" : "Bruschetta",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    },
+    {
+        "name" : "Caprese Salad",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    }], // End of App Section
+
+    "salad" : [{
+        "name" : "Italian",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false
+    },
+    {
+        "name" : "Greek",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false
+    },
+    {
+        "name" : "Meat Lover Salad",
+        "price" : 9.99,
+        "isSpicy" : true,
+        "isVeggy" : false
+    }] // End of Salad Section
+
+}
