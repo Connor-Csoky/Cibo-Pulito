@@ -1,5 +1,14 @@
 $(document).ready(function(){
 
+    let items;
+    console.log(JSON.parse(localStorage.getItem("menuDefault")))
+    if(JSON.parse(localStorage.getItem("menuDefault")) == "" || JSON.parse(localStorage.getItem("menuDefault")) == null) {
+        localStorage.setItem("items", JSON.stringify(menuDefault));
+
+        items = JSON.parse(localStorage.getItem("menuDefault") || "[]")
+    }
+    
+    
     let button
     xButt() 
     $('.addBtn').click(function() {
@@ -42,7 +51,7 @@ function xButt() {
     });
 };
 
-const items = {
+const menuDefault = {
 
     'drinks': [{
         "name": "Rootbeer",
