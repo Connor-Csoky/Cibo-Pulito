@@ -55,126 +55,6 @@ function xButt() {
 
 const menuDefault = {
 
-    'drinks': [{
-        "name": "Rootbeer",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Coke",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Sierra Mist",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    }], // End of Drinks Section
-    'pizza': [{
-        "name": "Cheese Pizza",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Pepporoni Pizza",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Hawaian Pizza",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Pizza Pie",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    },
-    {
-        "name": "Sausage Pizza",
-        "price": 9.99,
-        "isSpicy": false,
-        "isVeggy": false,
-    }], // End of Pizza Section
-  
-   'main' : [{
-        "name" : "Caponata",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Chicken Florentine Pasta",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Pasta Fagioli al Forno",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Bellini",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Pizzette with Prawns",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Chicken Parmesan",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Italian Meatball",
-        "price" : 9.99,
-        "isSpicy" : true,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Calzone",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Caprese Chicken",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    },
-
-    {
-        "name" : "Rosemary Mushroom Risotto",
-        "price" : 9.99,
-        "isSpicy" : false,
-        "isVeggy" : false,
-    }
-    ], // End of Main Section
-
     "app" : [{
         "name" : "Mozzerella Sticks",
         "price" : 9.99,
@@ -211,6 +91,116 @@ const menuDefault = {
         "price" : 9.99,
         "isSpicy" : true,
         "isVeggy" : false
-    }] // End of Salad Section
+    }], // End of Salad Section
+  
+   'main' : [{
+        "name" : "Caponata",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Chicken Florentine Pasta",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Pasta Fagioli al Forno",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Bellini",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Pizzette with Prawns",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Chicken Parmesan",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Italian Meatball",
+        "price" : 9.99,
+        "isSpicy" : true,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Calzone",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Caprese Chicken",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    },
+    {
+        "name" : "Rosemary Mushroom Risotto",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false,
+    }], // End of Main Section
 
+    'pizza': [{
+        "name": "Cheese Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pepporoni Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Hawaian Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pizza Pie",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Sausage Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    }], // End of Pizza Section
+
+    'drinks': [{
+        "name": "Rootbeer",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Coke",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Sierra Mist",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    }] // End of Drinks Section
 }
