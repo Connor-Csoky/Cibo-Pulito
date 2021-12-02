@@ -72,10 +72,10 @@ header img {
 }
 
 header .loginButt{
-    width: 100px;
+    width: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 header .loginButt * {
