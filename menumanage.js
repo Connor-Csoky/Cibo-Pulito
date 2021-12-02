@@ -43,7 +43,57 @@ function xButt() {
 };
 
 const items = {
-    'main' : [{
+
+    'drinks': [{
+        "name": "Rootbeer",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Coke",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Sierra Mist",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    }], // End of Drinks Section
+    'pizza': [{
+        "name": "Cheese Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pepporoni Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Hawaian Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pizza Pie",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Sausage Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    }], // End of Pizza Section
+  
+   'main' : [{
         "name" : "Caponata",
         "price" : 9.99,
         "isSpicy" : false,
@@ -112,5 +162,44 @@ const items = {
         "isSpicy" : false,
         "isVeggy" : false,
     }
-    ]
+    ], // End of Main Section
+
+    "app" : [{
+        "name" : "Mozzerella Sticks",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    },
+    {
+        "name" : "Bruschetta",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    },
+    {
+        "name" : "Caprese Salad",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : true
+    }], // End of App Section
+
+    "salad" : [{
+        "name" : "Italian",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false
+    },
+    {
+        "name" : "Greek",
+        "price" : 9.99,
+        "isSpicy" : false,
+        "isVeggy" : false
+    },
+    {
+        "name" : "Meat Lover Salad",
+        "price" : 9.99,
+        "isSpicy" : true,
+        "isVeggy" : false
+    }] // End of Salad Section
+
 }

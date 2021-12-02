@@ -72,10 +72,10 @@ header img {
 }
 
 header .loginButt{
-    width: 100px;
+    width: 15%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 header .loginButt * {
@@ -108,6 +108,10 @@ footer {
 
 .active {
     color: #00a2ff !important;
+}
+
+.manageOnly {
+    display: none;
 }
 
 @media screen and (max-width: 750px) {

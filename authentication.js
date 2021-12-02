@@ -1,5 +1,11 @@
 $( document ).ready(function() {
 
+    localStorage.setItem('aryon', 'CHASE')
+    localStorage.setItem('connor', 'CSOKY')
+    localStorage.setItem('javon', 'LONG')
+    localStorage.setItem('mainul', 'CHOWDHURY')
+
+
     let login = true;
     $('.signup').click(function(){
         if(login == true){ // Signup button clicked, modify form attributes to support Signup
@@ -12,6 +18,7 @@ $( document ).ready(function() {
             $('title').text('Cibo Pulito - Signup')
             $('.submit').val('Signup')
             $('.submit').attr('onclick', 'createItem()')
+            $('.form').attr('action', '#')
             login = false;
         }else if(login == false){ // Login button clicked, reset all forms to default
             $('.confirm').addClass('hidden');
@@ -23,6 +30,7 @@ $( document ).ready(function() {
             $('title').text('Cibo Pulito - Login')
             $('.submit').val('Login')
             $('.submit').attr('onclick', 'findItem()')
+            $('.form').attr('action', 'index.html')
             login = true;
         };
     });
@@ -62,12 +70,11 @@ function findItem() {
     let pass = $('.password').val();
     
     if(passCheck != null) {
-        window.alert('Checking')
         if(passCheck === pass){
+            localStorage.setItem('currentLogin', user)
             window.alert('Login Success')
         }
     }else{
         window.alert("Failed Login");
-        window.alert(passCheck)
     }
 }
