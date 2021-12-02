@@ -41,3 +41,58 @@ function xButt() {
         $(this).parent().parent().remove()
     });
 };
+
+
+
+const items = {
+    'drinks': [{
+        "name": "Rootbeer",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+        },
+        {
+        "name": "Coke",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+        },
+        {
+        "name": "Sierra Mist",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+        }
+    ], // End of Drinks Section
+    'pizza': [{
+        "name": "Cheese Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pepporoni Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Hawaian Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Pizza Pie",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    {
+        "name": "Sausage Pizza",
+        "price": 9.99,
+        "isSpicy": false,
+        "isVeggy": false,
+    },
+    ]// End of Pizza Section
+}
