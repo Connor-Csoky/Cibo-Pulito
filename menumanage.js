@@ -2,7 +2,7 @@ $(document).ready(function(){
 
     let app, salad, main, pizza, drinks;
 
-    if (localStorage.app == null || localStorage.app.length == 0){
+    if (localStorage.app == null || localStorage.app == '[]' || localStorage.app.length == 0){
         console.log(app)
         app = appDefault; 
         localStorage.setItem("app", JSON.stringify(app));
@@ -10,7 +10,7 @@ $(document).ready(function(){
     }else{
         app = JSON.parse(localStorage.app)
     }
-    if (localStorage.salad == null || localStorage.salad.length == 0){
+    if (localStorage.salad == null || localStorage.salad == '[]' || localStorage.salad.length == 0){
         console.log(salad)
         salad = saladDefault; 
         localStorage.setItem("salad", JSON.stringify(salad));
@@ -18,7 +18,7 @@ $(document).ready(function(){
     }else{
         salad = JSON.parse(localStorage.salad)
     }
-    if (localStorage.main == null || localStorage.main.length == 0){
+    if (localStorage.main == null || localStorage.main == '[]' || localStorage.main.length == 0){
         console.log(main)
         main = mainDefault; 
         localStorage.setItem("main", JSON.stringify(main));
@@ -26,7 +26,7 @@ $(document).ready(function(){
     }else{
         main = JSON.parse(localStorage.main)
     }
-    if (localStorage.pizza == null || localStorage.pizza.length == 0){
+    if (localStorage.pizza == null || localStorage.pizza == '[]' || localStorage.pizza.length == 0){
         console.log(pizza)
         pizza = pizzaDefault; 
         localStorage.setItem("pizza", JSON.stringify(pizza));
@@ -34,7 +34,7 @@ $(document).ready(function(){
     }else{
         pizza = JSON.parse(localStorage.pizza)
     }
-    if (localStorage.drinks == null || localStorage.drinks.length == 0){
+    if (localStorage.drinks == null || localStorage.drinks == '[]' || localStorage.drinks.length == 0){
         console.log(drinks)
         drinks = drinksDefault; 
         localStorage.setItem("drinks", JSON.stringify(drinks));
@@ -61,7 +61,67 @@ $(document).ready(function(){
     }
     
 
-    xButt() 
+    $('.xButton').click(function(){
+        let temp = $(this).parent().parent().find('.sectionDiv-P').text()
+        console.log(temp)
+        // if(app.includes(temp)){
+        //     app.splice(app.indexOf(temp),1)
+        //     console.log(app)
+        // }else if(salad.includes(temp)){
+        //     salad.splice(salad.indexOf(temp),1)
+        //     console.log(salad)
+        // }else if(main.includes(temp)){
+        //     main.splice(main.indexOf(temp),1)
+        //     console.log(main)
+        // }else if(pizza.includes(temp)){
+        //     pizza.splice(pizza.indexOf(temp),1)
+        //     console.log(pizza)
+        // }else if(drinks.includes(temp)){
+        //     drinks.splice(drinks.indexOf(temp),1)
+        //     console.log(drinks)
+        // }
+
+
+        for(let x = 0; x < app.length; x++) {
+            if(app[x].name == temp){
+                app.splice(x, 1)
+                console.log(app)
+                localStorage.setItem('app', JSON.stringify(app))
+            }
+        }
+        for(let x = 0; x < salad.length; x++) {
+            if(salad[x].name == temp){
+                salad.splice(x, 1)
+                console.log(salad)
+                localStorage.setItem('salad', JSON.stringify(salad))
+            }
+        }
+        for(let x = 0; x < main.length; x++) {
+            if(main[x].name == temp){
+                main.splice(x, 1)
+                console.log(main)
+                localStorage.setItem('main', JSON.stringify(main))
+            }
+        }
+        for(let x = 0; x < pizza.length; x++) {
+            if(pizza[x].name == temp){
+                pizza.splice(x, 1)
+                console.log(pizza)
+                localStorage.setItem('pizza', JSON.stringify(pizza))
+            }
+        }
+        for(let x = 0; x < drinks.length; x++) {
+            if(drinks[x].name == temp){
+                drinks.splice(x, 1)
+                console.log(drinks)
+                localStorage.setItem('drinks', JSON.stringify(drinks))
+            }
+        }
+
+
+        $(this).parent().parent().remove()
+
+    });
     
     let button;
 
@@ -80,21 +140,90 @@ $(document).ready(function(){
         console.log(button + " Test")
         if($('.spicy').prop("checked") == true && $('.veggy').prop("checked") == false) {
             $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+
             console.log("True && False")
         }else if($('.spicy').prop("checked") == false && $('.veggy').prop("checked") == true) {
             $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+
             console.log("False && True")
         }else if($('.spicy').prop("checked") == true && $('.veggy').prop("checked") == true) {
             $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+
             console.log("True && True")
         }else {
             $(button).parent().parent().before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="xButton">X</button></div></div>`)
+
+
             console.log("False && False")
         }
         
+
+        if($('#btn1.addBtn').id == button){
+            
+            app.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
+            console.log(app)
+            localStorage.setItem('app', JSON.stringify(app))
+
+        }else if($('#btn2.addBtn').id == button){
+
+            salad.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
+            console.log(salad)
+            localStorage.setItem('salad', JSON.stringify(salad))
+
+        }else if($('#btn3.addBtn').id == button){
+
+            main.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
+            console.log(main)
+            localStorage.setItem('main', JSON.stringify(main))
+
+        }else if($('#btn4.addBtn').id == button){
+
+            pizza.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
+            console.log(pizza)
+            localStorage.setItem('pizza', JSON.stringify(pizza))
+
+        }else if($('#btn5.addBtn').id == button){
+
+            drinks.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
+            console.log(drinks)
+            localStorage.setItem('drinks', JSON.stringify(drinks))
+
+        }
+
+
+
+
+
+        // app.push({'name' : 'banana','price' : 100,'isSpicy' : true, 'isVeggy' : false})
+        // localStorage.setItem('app', JSON.stringify(app))
+
         $('.orderInput').val("");
         $('.bg-modal').css('display', 'none');
-        xButt()
+
+        $('.xButton').click(function(){
+            let temp = $(this).parent().parent().find('.sectionDiv-P')
+            if(app.indexOf(temp) != -1){
+                app.splice(app.indexOf(temp),1)
+                console.log(app)
+            }else if(salad.indexOf(temp) != -1){
+                salad.splice(salad.indexOf(temp),1)
+                console.log(salad)
+            }else if(main.indexOf(temp) != -1){
+                main.splice(main.indexOf(temp),1)
+                console.log(main)
+            }else if(pizza.indexOf(temp) != -1){
+                pizza.splice(pizza.indexOf(temp),1)
+                console.log(pizza)
+            }else if(drinks.indexOf(temp) != -1){
+                drinks.splice(drinks.indexOf(temp),1)
+                console.log(drinks)
+            }
+            $(this).parent().parent().remove()
+    
+        });
     })
     
     console.log(app);
@@ -121,12 +250,6 @@ function createPage(itemName, itemPrice, spicy, veggy, section) {
         }
     }
 
-
-function xButt() {
-    $('.xButton').click(function(){
-        $(this).parent().parent().remove()
-    });
-};
  
 const appDefault = [{
         "name" : "Mozzerella Sticks",
