@@ -137,7 +137,6 @@ $(document).ready(function(){
         let itemName = $('.itemName').val()
         let itemPrice = $('.itemPrice').val()
 
-        console.log(button + " Test")
         if($('.spicy').prop("checked") == true && $('.veggy').prop("checked") == false) {
             $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
 
@@ -161,31 +160,31 @@ $(document).ready(function(){
         }
         
 
-        if($('#btn1.addBtn').id == button){
+        if($(button.hasClass('.btn1') == true)){
             
             app.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(app)
             localStorage.setItem('app', JSON.stringify(app))
 
-        }else if($('#btn2.addBtn').id == button){
+        }else if($(button.hasClass('.btn2') == true)){
 
             salad.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(salad)
             localStorage.setItem('salad', JSON.stringify(salad))
 
-        }else if($('#btn3.addBtn').id == button){
+        }else if($(button.hasClass('.btn3') == true)){
 
             main.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(main)
             localStorage.setItem('main', JSON.stringify(main))
 
-        }else if($('#btn4.addBtn').id == button){
+        }else if($(button.hasClass('.btn4') == true)){
 
             pizza.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(pizza)
             localStorage.setItem('pizza', JSON.stringify(pizza))
 
-        }else if($('#btn5.addBtn').id == button){
+        }else if($(button.hasClass('.btn5') == true)){
 
             drinks.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(drinks)
