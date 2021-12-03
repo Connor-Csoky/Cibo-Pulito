@@ -1,15 +1,57 @@
 $(document).ready(function(){
 
-    let items; 
+    let app, salad, main, pizza, drinks;
 
-    items = JSON.parse(localStorage.getItem("items") || "[]")
-    if (items.length == 0 || null){
-        localStorage.setItem("items", JSON.stringify(menuDefault));
-        items = JSON.parse(localStorage.getItem("items") || "[]")
+    if (localStorage.app == null || localStorage.app.length == 0){
+        console.log(app)
+        app = appDefault; 
+        localStorage.setItem("app", JSON.stringify(app));
+        console.log("app")
+    }else{
+        app = JSON.parse(localStorage.app)
     }
-    else{
+    if (localStorage.salad == null || localStorage.salad.length == 0){
+        console.log(salad)
+        salad = saladDefault; 
+        localStorage.setItem("salad", JSON.stringify(salad));
+        console.log("salad")
+    }else{
+        salad = JSON.parse(localStorage.salad)
+    }
+    if (localStorage.main == null || localStorage.main.length == 0){
+        console.log(main)
+        main = mainDefault; 
+        localStorage.setItem("main", JSON.stringify(main));
+        console.log("main")
+    }else{
+        main = JSON.parse(localStorage.main)
+    }
+    if (localStorage.pizza == null || localStorage.pizza.length == 0){
+        console.log(pizza)
+        pizza = pizzaDefault; 
+        localStorage.setItem("pizza", JSON.stringify(pizza));
+        console.log("pizza")
+    }else{
+        pizza = JSON.parse(localStorage.pizza)
+    }
+    if (localStorage.drinks == null || localStorage.drinks.length == 0){
+        console.log(drinks)
+        drinks = drinksDefault; 
+        localStorage.setItem("drinks", JSON.stringify(drinks));
+        console.log("drinks")
+    }else{
+        drinks = JSON.parse(localStorage.drinks)
+    }
 
+
+    for(let x = 0; x < drinks.length; x++) {
+        for(let y = 0; y < 4; y++){
+            console.log(drinks[x].name);
+            console.log('test2')
+        }
+        console.log('test')
     }
+    
 
     let button
     xButt() 
@@ -43,8 +85,12 @@ $(document).ready(function(){
         xButt()
     })
     
+    console.log(app);
+    console.log(salad);
+    console.log(main);
+    console.log(pizza);
+    console.log(drinks);
 })
-    
 
 
 function xButt() {
@@ -53,9 +99,7 @@ function xButt() {
     });
 };
 
-const menuDefault = {
-
-    "app" : [{
+const appDefault = [{
         "name" : "Mozzerella Sticks",
         "price" : 9.99,
         "isSpicy" : false,
@@ -72,9 +116,9 @@ const menuDefault = {
         "price" : 9.99,
         "isSpicy" : false,
         "isVeggy" : true
-    }], // End of App Section
+    }] // End of App Section
 
-    "salad" : [{
+const saladDefault = [{
         "name" : "Italian",
         "price" : 9.99,
         "isSpicy" : false,
@@ -91,9 +135,9 @@ const menuDefault = {
         "price" : 9.99,
         "isSpicy" : true,
         "isVeggy" : false
-    }], // End of Salad Section
+    }] // End of Salad Section
   
-   'main' : [{
+const mainDefault = [{
         "name" : "Caponata",
         "price" : 9.99,
         "isSpicy" : false,
@@ -152,9 +196,9 @@ const menuDefault = {
         "price" : 9.99,
         "isSpicy" : false,
         "isVeggy" : false,
-    }], // End of Main Section
+    }] // End of Main Section
 
-    'pizza': [{
+const pizzaDefault = [{
         "name": "Cheese Pizza",
         "price": 9.99,
         "isSpicy": false,
@@ -183,9 +227,9 @@ const menuDefault = {
         "price": 9.99,
         "isSpicy": false,
         "isVeggy": false,
-    }], // End of Pizza Section
+    }] // End of Pizza Section
 
-    'drinks': [{
+const drinksDefault = [{
         "name": "Rootbeer",
         "price": 9.99,
         "isSpicy": false,
@@ -203,4 +247,4 @@ const menuDefault = {
         "isSpicy": false,
         "isVeggy": false,
     }] // End of Drinks Section
-}
+
