@@ -44,21 +44,26 @@ $(document).ready(function(){
     }
 
 
+    for(let x = 0; x < app.length; x++) {
+        createPage(app[x].name, app[x].price, app[x].isSpicy, app[x].isVeggy, $('.appSelector'));
+    }
+    for(let x = 0; x < salad.length; x++) {
+        createPage(salad[x].name, salad[x].price, salad[x].isSpicy, salad[x].isVeggy, $('.saladSelector'));
+    }
+    for(let x = 0; x < main.length; x++) {
+        createPage(main[x].name, main[x].price, main[x].isSpicy, main[x].isVeggy, $('.mainSelector'));
+    }
+    for(let x = 0; x < pizza.length; x++) {
+        createPage(pizza[x].name, pizza[x].price, pizza[x].isSpicy, pizza[x].isVeggy, $('.pizzaSelector'));
+    }
     for(let x = 0; x < drinks.length; x++) {
-        for(let y = 0; y < 4; y++){
-            console.log(drinks[x].name);
-            console.log('test2')
-        }
-        console.log('test')
+        createPage(drinks[x].name, drinks[x].price, drinks[x].isSpicy, drinks[x].isVeggy, $('.drinksSelector'));
     }
     
 
-    let button
+    let button;
     xButt() 
-    $('.addBtn').click(function() {
-        $('.bg-modal').css('display', 'flex');
-        button = $(this)
-    })
+    addButt()
     $('.btnClose').click(function(){
         $('.bg-modal').css('display', 'none');
     })
@@ -92,6 +97,23 @@ $(document).ready(function(){
     console.log(drinks);
 })
 
+function createPage(itemName, itemPrice, spicy, veggy, section) {
+
+        if(spicy == true && veggy == false) {
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+        }else if(spicy == false && veggy == true) {
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+        }else if(spicy == true && veggy == true) {
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+
+        }else {
+            $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="xButton">X</button></div></div>`)
+
+        }
+    }
+
 
 function xButt() {
     $('.xButton').click(function(){
@@ -99,6 +121,15 @@ function xButt() {
     });
 };
 
+function addButt() {
+    console.log('test')
+    $('.addBtn').click(function() {
+        $('.bg-modal').css('display', 'flex');
+        button = $(this)
+        console.log($(this))
+    })
+}
+ 
 const appDefault = [{
         "name" : "Mozzerella Sticks",
         "price" : 9.99,

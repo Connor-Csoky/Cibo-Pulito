@@ -126,7 +126,7 @@ ion-icon[name="flame"] {
 
 .bg-modal {
     display: none;
-    position: absolute;
+    position: fixed;
     justify-content: center;
     align-items: center;
     /* background-color: rgba(0, 0, 0, 0.7); */
