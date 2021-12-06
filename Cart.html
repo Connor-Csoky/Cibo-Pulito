@@ -29,29 +29,31 @@
         </header>
         
         <section>
-            <h2 class="section-header" style="padding-top: 50px; padding-bottom:50px;">CART</h2>
-            <table>
-                <tr>
-                    <th class="cart-item cart-header cart-column">ITEM</th>
-                    <th class="cart-price cart-header cart-column">PRICE</th>
-                    <th class="cart-quantity cart-header cart-column">QUANTITY</th>
-                </tr>
-                <tr>
-                    <td><p>Single Meatball</p></td>
-                    <td><p>$4.20</p></td>
-                    <td><p>5</p></td>
-                </tr>
-                <tr>
-                    <td><p>Meat Lovers Salad</p></td>
-                    <td><p>$4.20</p></td>
-                    <td><p>5</p></td>
-                </tr>
-            </table>
-            <div class="cart-total" style="margin-right: 150px;">
-                <strong class="cart-total-title">Total</strong>
-                <span class="cart-total-price">$0</span>
+            <div class="section-background">
+                <h2 class="section-header" style="padding-top: 50px; padding-bottom:50px;">CART</h2>
+                <table>
+                    <tr>
+                        <th class="cart-item cart-header cart-column">ITEM</th>
+                        <th class="cart-price cart-header cart-column">PRICE</th>
+                        <th class="cart-quantity cart-header cart-column">QUANTITY</th>
+                    </tr>
+                    <tr>
+                        <td><p>Single Meatball</p></td>
+                        <td><p>$4.20</p></td>
+                        <td><p>5</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>Meat Lovers Salad</p></td>
+                        <td><p>$4.20</p></td>
+                        <td><p>5</p></td>
+                    </tr>
+                </table>
+                <div class="cart-total" style="margin-right: 150px;">
+                    <strong class="cart-total-title">Total</strong>
+                    <span class="cart-total-price">$0</span>
+                </div>
+                <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
             </div>
-            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
         </section>
         
         <footer>
@@ -70,6 +72,13 @@
         </footer>
 
         <style>
+
+            .section-background {
+                background-color:#f9d2aa;
+                border: 1px solid black;
+                width:80%;
+                margin: 2rem auto;
+            }
 
             .section-header {
                 text-align: center;
@@ -138,6 +147,7 @@
             table {
                 width: 87.5%;
                 margin: 0 auto;
+                background-color:white;
             }
 
             table, th, td {
