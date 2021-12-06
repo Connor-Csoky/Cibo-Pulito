@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    let app, salad, main, pizza, drinks, cartItems = [];
+    let app, salad, main, pizza, drinks, cartItems = [], button;
     var cItemName, cItemPrice;
 
     if (localStorage.app == null || localStorage.app == '[]' || localStorage.app.length == 0){
@@ -66,18 +66,25 @@ $(document).ready(function(){
     
     $('.plusButton').click(function(){
         $('.bg-modal').css('display', 'flex');
+        button = $(this).parent().parent();
     })
     
     $('.btnClose').click(function(){
         $('.bg-modal').css('display', 'none');
         $('.orderInput').val("");
     })
+
     
     $('.btnOrder').click(function(){
+        cItemName = button.find('#name').text()
+
+        cItemPrice = button.find('#price').text()
+
+
         let cItemSpecial = $('.orderInput').val();
         cartItems.push({'name' : cItemName, 'price' : cItemPrice, 'special' : cItemSpecial})
         localStorage.setItem('cartItems', JSON.stringify(cartItems))
-        
+
         $('.bg-modal').css('display', 'none');
         $('.orderInput').val("");
     })
@@ -87,23 +94,18 @@ $(document).ready(function(){
 function createPage(itemName, itemPrice, spicy, veggy, section) {
 
     if(spicy == true && veggy == false) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton" onClick="changeVar('${itemName}','${itemPrice}')">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
     }else if(spicy == false && veggy == true) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton" onClick="changeVar('${itemName}','${itemPrice}')">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
     }else if(spicy == true && veggy == true) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton" onClick="changeVar('${itemName}','${itemPrice}')">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
     }else {
-        $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="plusButton" onClick="changeVar('${itemName}','${itemPrice}')">+</button></div></div>`)
+        $(section).before(`<div><p class="sectionDiv-P" id="name">${itemName}</p><div class="priceDiv"><p id="price">$${itemPrice}</p><button class="plusButton">+</button></div></div>`)
 
     }
-}
-
-function changeVar(name,price) {
-    cItemName = name;
-    cItemPrice = price;
 }
 
 const appDefault = [{
