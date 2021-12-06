@@ -30,7 +30,7 @@ $( document ).ready(function() {
             $('title').text('Cibo Pulito - Login')
             $('.submit').val('Login')
             $('.submit').attr('onclick', 'findItem()')
-            $('.form').attr('action', 'index.html')
+            $('.form').attr('action', '#')
             login = true;
         };
     });
@@ -71,10 +71,12 @@ function findItem() {
     
     if(passCheck != null) {
         if(passCheck === pass){
+            $('.form').attr('action', 'index.html')
             localStorage.setItem('currentLogin', user)
-            window.alert('Login Success')
+            window.alert('Successful Login')
         }
     }else{
-        window.alert("Failed Login");
+        $('.form').attr('action', '#')
+        window.alert("Invalid Login");
     }
 }

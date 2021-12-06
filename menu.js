@@ -1,7 +1,4 @@
 $(document).ready(function(){
-    
-
-
 
     let app, salad, main, pizza, drinks;
 
@@ -63,22 +60,7 @@ $(document).ready(function(){
         createPage(drinks[x].name, drinks[x].price, drinks[x].isSpicy, drinks[x].isVeggy, $('.drinksSelector'));
     }
 
-    function createPage(itemName, itemPrice, spicy, veggy, section) {
-
-        if(spicy == true && veggy == false) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
-
-        }else if(spicy == false && veggy == true) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
-
-        }else if(spicy == true && veggy == true) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
-
-        }else {
-            $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="plusButton">+</button></div></div>`)
-
-        }
-    }
+    
 
     
     $('.plusButton').click(function(){
@@ -94,8 +76,25 @@ $(document).ready(function(){
         $('.bg-modal').css('display', 'none');
     })
 
-
+});
  
+function createPage(itemName, itemPrice, spicy, veggy, section) {
+
+    if(spicy == true && veggy == false) {
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+
+    }else if(spicy == false && veggy == true) {
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+
+    }else if(spicy == true && veggy == true) {
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+
+    }else {
+        $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="plusButton">+</button></div></div>`)
+
+    }
+}
+
 const appDefault = [{
         "name" : "Mozzerella Sticks",
         "price" : 9.99,
@@ -244,5 +243,3 @@ const drinksDefault = [{
         "isSpicy": false,
         "isVeggy": false,
     }] // End of Drinks Section
-
-});
