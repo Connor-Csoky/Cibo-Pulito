@@ -1,22 +1,7 @@
-$('.plusButton').click(function(){
-    $('.bg-modal').css('display', 'flex');
-})
-
-$('.btnClose').click(function(){
-    $('.bg-modal').css('display', 'none');
-})
-
-$('.btnOrder').click(function(){
-    $('.orderInput').val(" ");
-})
-
-
-
-
-
-
-
 $(document).ready(function(){
+    
+
+
 
     let app, salad, main, pizza, drinks;
 
@@ -81,19 +66,34 @@ $(document).ready(function(){
     function createPage(itemName, itemPrice, spicy, veggy, section) {
 
         if(spicy == true && veggy == false) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
         }else if(spicy == false && veggy == true) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
         }else if(spicy == true && veggy == true) {
-            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            $(section).before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
 
         }else {
-            $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="xButton">X</button></div></div>`)
+            $(section).before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="plusButton">+</button></div></div>`)
 
         }
     }
+
+    
+    $('.plusButton').click(function(){
+        $('.bg-modal').css('display', 'flex');
+    })
+    
+    $('.btnClose').click(function(){
+        $('.bg-modal').css('display', 'none');
+    })
+    
+    $('.btnOrder').click(function(){
+        $('.orderInput').val("");
+        $('.bg-modal').css('display', 'none');
+    })
+
 
  
 const appDefault = [{

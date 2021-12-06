@@ -133,6 +133,7 @@ $(document).ready(function(){
     $('.btnClose').click(function(){
         $('.bg-modal').css('display', 'none');
     })
+    
     $('.btnOrder').click(function(){
         let itemName = $('.itemName').val()
         let itemPrice = $('.itemPrice').val()
