@@ -123,11 +123,11 @@ $(document).ready(function(){
 
     });
     
-    let button;
-
+    var button;
+    
     $('.addBtn').click(function() {
         $('.bg-modal').css('display', 'flex');
-        button = $(this)
+        button = $(this);
     })
 
     $('.btnClose').click(function(){
@@ -138,53 +138,53 @@ $(document).ready(function(){
         let itemPrice = $('.itemPrice').val()
 
         if($('.spicy').prop("checked") == true && $('.veggy').prop("checked") == false) {
-            $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            button.parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
 
 
             console.log("True && False")
         }else if($('.spicy').prop("checked") == false && $('.veggy').prop("checked") == true) {
-            $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            button.parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
 
 
             console.log("False && True")
         }else if($('.spicy').prop("checked") == true && $('.veggy').prop("checked") == true) {
-            $(button).parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
+            button.parent().parent().before(`<div><div class="dont"><p class="sectionDiv-P">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$${itemPrice}</p> <button class="xButton">X</button></div></div>`)
 
 
             console.log("True && True")
         }else {
-            $(button).parent().parent().before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="xButton">X</button></div></div>`)
+            button.parent().parent().before(`<div><p class="sectionDiv-P">${itemName}</p><div class="priceDiv"><p>$${itemPrice}</p><button class="xButton">X</button></div></div>`)
 
 
             console.log("False && False")
         }
         
 
-        if($(button.hasClass('.btn1') == true)){
+        if(button.hasClass('btn1') == true){
             
             app.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(app)
             localStorage.setItem('app', JSON.stringify(app))
 
-        }else if($(button.hasClass('.btn2') == true)){
+        }else if(button.hasClass('btn2') == true){
 
             salad.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(salad)
             localStorage.setItem('salad', JSON.stringify(salad))
 
-        }else if($(button.hasClass('.btn3') == true)){
+        }else if(button.hasClass('btn3') == true){
 
             main.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(main)
             localStorage.setItem('main', JSON.stringify(main))
 
-        }else if($(button.hasClass('.btn4') == true)){
+        }else if(button.hasClass('btn4') == true){
 
             pizza.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(pizza)
             localStorage.setItem('pizza', JSON.stringify(pizza))
 
-        }else if($(button.hasClass('.btn5') == true)){
+        }else if(button.hasClass('btn5') == true){
 
             drinks.push({'name' : itemName, 'price' : itemPrice, 'isSpicy' : $('.spicy').prop("checked"), 'isVeggy' : $('.veggy').prop("checked")})
             console.log(drinks)
