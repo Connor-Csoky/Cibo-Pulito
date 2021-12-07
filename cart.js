@@ -27,8 +27,11 @@ $(document).ready(function(){
             })
         }
         tempArr.push(currentOrder = {'total' : totalVal})
-        $('.blank').remove()
+        $('.blank').attr('display', 'none')
     }
+
+
+
     console.log(cartItems.length)
     $('.cartTotal').text(totalVal)
 
@@ -47,6 +50,25 @@ $(document).ready(function(){
             $('.btn-purchase').prop('disable', true);
         })
     }
+
+    $('.xButton').click(function(){
+        let temp = $(this).parent().siblings().find('.itemName').text()
+        console.log(temp)
+
+
+        for(let x = 0; x < cartItems.length; x++) {
+            if(cartItems[x].name == temp){
+                cartItems.splice(x, 1)
+                console.log(cartItems)
+                localStorage.setItem('cartItems', JSON.stringify(cartItems))
+                $(this).parent().parent().remove()
+                if(cartItems == null || cartItems.length <= 0 || cartItems == undefined){
+                    $('.blank').('display', 'none')
+                       
+                }
+            }
+        }
+    });
     
 });
 
@@ -55,9 +77,10 @@ function createPage(itemName, itemPrice, special, section) {
 
         $(section).last().after(`
             <tr class='item'>
-                <td><p>${itemName}</p></td>
+                <td><p class="itemName">${itemName}</p></td>
                 <td><p>$${itemPrice}</p></td>
                 <td><textarea>${special}</textarea/td>
+                <td><p class="xButton">X</p></td>
             </tr>
             `)
 }

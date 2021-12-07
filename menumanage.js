@@ -64,22 +64,6 @@ $(document).ready(function(){
     $('.xButton').click(function(){
         let temp = $(this).parent().parent().find('.sectionDiv-P').text()
         console.log(temp)
-        // if(app.includes(temp)){
-        //     app.splice(app.indexOf(temp),1)
-        //     console.log(app)
-        // }else if(salad.includes(temp)){
-        //     salad.splice(salad.indexOf(temp),1)
-        //     console.log(salad)
-        // }else if(main.includes(temp)){
-        //     main.splice(main.indexOf(temp),1)
-        //     console.log(main)
-        // }else if(pizza.includes(temp)){
-        //     pizza.splice(pizza.indexOf(temp),1)
-        //     console.log(pizza)
-        // }else if(drinks.includes(temp)){
-        //     drinks.splice(drinks.indexOf(temp),1)
-        //     console.log(drinks)
-        // }
 
 
         for(let x = 0; x < app.length; x++) {
@@ -203,27 +187,6 @@ $(document).ready(function(){
         $('.orderInput').val("");
         $('.bg-modal').css('display', 'none');
 
-        $('.xButton').click(function(){
-            let temp = $(this).parent().parent().find('.sectionDiv-P')
-            if(app.indexOf(temp) != -1){
-                app.splice(app.indexOf(temp),1)
-                console.log(app)
-            }else if(salad.indexOf(temp) != -1){
-                salad.splice(salad.indexOf(temp),1)
-                console.log(salad)
-            }else if(main.indexOf(temp) != -1){
-                main.splice(main.indexOf(temp),1)
-                console.log(main)
-            }else if(pizza.indexOf(temp) != -1){
-                pizza.splice(pizza.indexOf(temp),1)
-                console.log(pizza)
-            }else if(drinks.indexOf(temp) != -1){
-                drinks.splice(drinks.indexOf(temp),1)
-                console.log(drinks)
-            }
-            $(this).parent().parent().remove()
-    
-        });
     })
     
     console.log(app);
