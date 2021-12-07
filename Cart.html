@@ -39,11 +39,13 @@
                         <th class="cart-item cart-header cart-column">ITEM</th>
                         <th class="cart-price cart-header cart-column">PRICE</th>
                         <th class="cart-quantity cart-header cart-column">CUSTOMIZATION</th>
+                        <th class="cart-header cart-column remove" ></th>
                     </tr>
                     <tr class="blank">
                         <td><p></p></td>
                         <td><p></p></td>
                         <td><textarea readonly></textarea></td>
+                        <td class="xButton hidden" aria-disabled="true" disabled>X</td>
                     </tr>
                     <!-- <tr class="item">
                         <td><p>Meat Lovers Salad</p></td>
@@ -80,6 +82,21 @@
         </footer>
 
         <style>
+
+            .hidden {
+                display: none;
+            }
+
+            .xButton {
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                font-size: 2.3rem;
+                color: red;
+                font-weight: bold;
+                background-color: transparent;
+                cursor: pointer;
+                text-shadow: 1px 1px 3px black;
+            }
 
             textarea {
                 resize: none;
@@ -166,6 +183,7 @@
 
             td {
                 padding: 10px;
+                
             }
 
             table {
