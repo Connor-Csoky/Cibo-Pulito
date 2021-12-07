@@ -29,16 +29,25 @@ $(document).ready(function(){
         tempArr.push(currentOrder = {'total' : totalVal})
         $('.blank').remove()
     }
-
+    console.log(cartItems.length)
     $('.cartTotal').text(totalVal)
-    $('.btn-purchase').click(function() {
-        localStorage.setItem('cartItems', '[]');
-        cartItems = [];
-        $('.item').remove()
-        receiptArr.push(tempArr)
 
-        localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
-    })
+    if(cartItems.length == 0){
+        $('.btn-purchase').disabled = true;
+    }
+    else {
+        $('.btn-purchase').click(function() {
+            localStorage.setItem('cartItems', '[]');
+            cartItems = [];
+            $('.item').remove()
+            receiptArr.push(tempArr)
+    
+            localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
+            tempArr = []
+            $('.btn-purchase').disabled = true;
+        })
+    }
+    
 });
 
 
