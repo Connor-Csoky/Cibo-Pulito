@@ -42,6 +42,12 @@ $(document).ready(function(){
         console.log("drinks")
     }else{
         drinks = JSON.parse(localStorage.drinks)
+    
+    }if (localStorage.cartItems == null || localStorage.cartItems == '[]' || localStorage.cartItems.length == 0){ 
+        localStorage.setItem("cartItems", '[]');
+        console.log("cartItems")
+    }else{
+        cartItems = JSON.parse(localStorage.cartItems)
     }
 
 

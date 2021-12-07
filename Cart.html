@@ -2,6 +2,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="headFoot.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="loginCheck.js"></script>
+
+        <script src="cart.js"></script>
 
         <script src="loginCheck.js"></script>
 
@@ -31,22 +34,25 @@
         <section>
             <div class="section-background">
                 <h2 class="section-header" style="padding-top: 50px; padding-bottom:50px;">CART</h2>
-                <table>
+                <table class="table">
                     <tr>
                         <th class="cart-item cart-header cart-column">ITEM</th>
                         <th class="cart-price cart-header cart-column">PRICE</th>
                         <th class="cart-quantity cart-header cart-column">CUSTOMIZATION</th>
                     </tr>
-                    <tr>
-                        <td><p>Single Meatball</p></td>
-                        <td><p>$4.20</p></td>
-                        <td><textarea>5</textarea></td>
+                    <tr class="blank">
+                        <td><p></p></td>
+                        <td><p></p></td>
+                        <td><textarea readonly></textarea></td>
                     </tr>
-                    <tr>
+                    <!-- <tr class="item">
                         <td><p>Meat Lovers Salad</p></td>
                         <td><p>$4.20</p></td>
                         <td><textarea>5</textarea/td>
-                    </tr>
+                    </tr> -->
+
+
+                    <span class="selector"></span>
                 </table>
                 <div class="cart-total" style="margin-right: 150px;">
                     <strong class="cart-total-title">Total</strong>
@@ -80,7 +86,7 @@
                 border: 1px dashed black;
                 width: 100%; 
                 height: 100%;
-                padding: .5%
+                padding: 1%;
             }
 
             section {
