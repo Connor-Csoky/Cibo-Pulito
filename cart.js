@@ -27,7 +27,7 @@ $(document).ready(function(){
             })
         }
         tempArr.push(currentOrder = {'total' : totalVal})
-        $('.blank').attr('display', 'none')
+        $('.blank').css('display', 'none')
     }
 
 
@@ -66,7 +66,7 @@ $(document).ready(function(){
                 localStorage.setItem('cartItems', JSON.stringify(cartItems))
                 $(this).parent().parent().remove()
                 if(cartItems == null || cartItems.length <= 0 || cartItems == undefined){
-                    $('.blank').('display', 'none')
+                    $('.blank').css('display', 'contents')
                        
                 }
             }
