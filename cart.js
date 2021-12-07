@@ -33,7 +33,7 @@ $(document).ready(function(){
     $('.cartTotal').text(totalVal)
 
     if(cartItems.length == 0){
-        $('.btn-purchase').disabled = true;
+        $('.btn-purchase').prop('disable', true);
     }
     else {
         $('.btn-purchase').click(function() {
@@ -44,7 +44,7 @@ $(document).ready(function(){
     
             localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
             tempArr = []
-            $('.btn-purchase').disabled = true;
+            $('.btn-purchase').prop('disable', true);
         })
     }
     
