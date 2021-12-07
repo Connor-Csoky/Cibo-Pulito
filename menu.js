@@ -42,6 +42,12 @@ $(document).ready(function(){
         console.log("drinks")
     }else{
         drinks = JSON.parse(localStorage.drinks)
+    
+    }if (localStorage.cartItems == null || localStorage.cartItems == '[]' || localStorage.cartItems.length == 0){ 
+        localStorage.setItem("cartItems", '[]');
+        console.log("cartItems")
+    }else{
+        cartItems = JSON.parse(localStorage.cartItems)
     }
 
 
@@ -94,16 +100,16 @@ $(document).ready(function(){
 function createPage(itemName, itemPrice, spicy, veggy, section) {
 
     if(spicy == true && veggy == false) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$<span id="price">${itemPrice}</span></p> <button class="plusButton">+</button></div></div>`)
 
     }else if(spicy == false && veggy == true) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon></div><div class="priceDiv"><p>$<span id="price">${itemPrice}</span></p> <button class="plusButton">+</button></div></div>`)
 
     }else if(spicy == true && veggy == true) {
-        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p id="price">$${itemPrice}</p> <button class="plusButton">+</button></div></div>`)
+        $(section).before(`<div><div class="dont"><p class="sectionDiv-P" id="name">${itemName}</p><ion-icon name="leaf"></ion-icon><ion-icon name="flame"></ion-icon></div><div class="priceDiv"><p>$<span id="price">${itemPrice}</span></p> <button class="plusButton">+</button></div></div>`)
 
     }else {
-        $(section).before(`<div><p class="sectionDiv-P" id="name">${itemName}</p><div class="priceDiv"><p id="price">$${itemPrice}</p><button class="plusButton">+</button></div></div>`)
+        $(section).before(`<div><p class="sectionDiv-P" id="name">${itemName}</p><div class="priceDiv"><p>$<span id="price">${itemPrice}</span></p><button class="plusButton">+</button></div></div>`)
 
     }
 }
