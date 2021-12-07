@@ -39,13 +39,12 @@
                         <th class="cart-item cart-header cart-column">ITEM</th>
                         <th class="cart-price cart-header cart-column">PRICE</th>
                         <th class="cart-quantity cart-header cart-column">CUSTOMIZATION</th>
-                        <th class="cart-header cart-column remove" ></th>
+                        <th class="cart-header cart-column remove" ><p class="fake">X</p></th>
                     </tr>
                     <tr class="blank">
                         <td><p></p></td>
                         <td><p></p></td>
                         <td><textarea readonly></textarea></td>
-                        <td class="xButton hidden" aria-disabled="true" disabled>X</td>
                     </tr>
                     <!-- <tr class="item">
                         <td><p>Meat Lovers Salad</p></td>
@@ -89,12 +88,13 @@
         </div>
 
         <style>
+            
 
             .hidden {
                 display: none;
             }
 
-            .xButton {
+            .xButton, .fake {
                 font-family: Arial, Helvetica, sans-serif;
                 text-align: center;
                 font-size: 2.3rem;
@@ -103,6 +103,12 @@
                 background-color: transparent;
                 cursor: pointer;
                 text-shadow: 1px 1px 3px black;
+            }
+            
+            .fake {
+                color: transparent;
+                text-shadow: none;
+                cursor:default;
             }
 
             textarea {
