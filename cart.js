@@ -34,6 +34,7 @@ $(document).ready(function(){
 
     if(cartItems.length == 0){
         $('.btn-purchase').prop('disable', true);
+        console.log('test')
     }
     else {
         $('.btn-purchase').click(function() {
@@ -44,7 +45,9 @@ $(document).ready(function(){
     
             localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
             tempArr = []
+            $('.bg-modal').css('display', 'flex');
             $('.btn-purchase').prop('disable', true);
+            
         })
     }
     
