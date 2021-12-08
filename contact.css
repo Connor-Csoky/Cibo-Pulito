@@ -13,6 +13,13 @@ section {
     grid-template-columns: 1fr;
     grid-template-rows: 2fr 5fr;
     grid-gap: 25px;
+    transition: all .25s;
+}
+
+@media screen and (max-width: 1000px) {
+    .content {
+        width: 90%;
+    }               
 }
 
 .form {
