@@ -43,7 +43,6 @@ $(document).ready(function(){
         $('.btn-purchase').click(function() {
             localStorage.setItem('cartItems', '[]');
             cartItems = [];
-            $('.item').remove()
             receiptArr.push(tempArr)
     
             localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
@@ -67,7 +66,7 @@ $(document).ready(function(){
                 $(this).parent().parent().remove()
                 if(cartItems == null || cartItems.length <= 0 || cartItems == undefined){
                     $('.blank').css('display', 'contents')
-                       
+                    $('.btn-purchase').prop('disable', true);  
                 }
             }
         }
