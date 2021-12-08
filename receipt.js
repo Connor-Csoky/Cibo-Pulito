@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    let total = 0, y, x;
+    let y, x;
     let page = JSON.parse(localStorage.getItem('receiptArr'))
 
     for(x = 0; x < page.length; x++) {
