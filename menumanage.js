@@ -187,6 +187,52 @@ $(document).ready(function(){
         $('.orderInput').val("");
         $('.bg-modal').css('display', 'none');
 
+        $('.xButton').click(function(){
+            let temp = $(this).parent().parent().find('.sectionDiv-P').text()
+            console.log(temp)
+    
+    
+            for(let x = 0; x < app.length; x++) {
+                if(app[x].name == temp){
+                    app.splice(x, 1)
+                    console.log(app)
+                    localStorage.setItem('app', JSON.stringify(app))
+                }
+            }
+            for(let x = 0; x < salad.length; x++) {
+                if(salad[x].name == temp){
+                    salad.splice(x, 1)
+                    console.log(salad)
+                    localStorage.setItem('salad', JSON.stringify(salad))
+                }
+            }
+            for(let x = 0; x < main.length; x++) {
+                if(main[x].name == temp){
+                    main.splice(x, 1)
+                    console.log(main)
+                    localStorage.setItem('main', JSON.stringify(main))
+                }
+            }
+            for(let x = 0; x < pizza.length; x++) {
+                if(pizza[x].name == temp){
+                    pizza.splice(x, 1)
+                    console.log(pizza)
+                    localStorage.setItem('pizza', JSON.stringify(pizza))
+                }
+            }
+            for(let x = 0; x < drinks.length; x++) {
+                if(drinks[x].name == temp){
+                    drinks.splice(x, 1)
+                    console.log(drinks)
+                    localStorage.setItem('drinks', JSON.stringify(drinks))
+                }
+            }
+    
+    
+            $(this).parent().parent().remove()
+    
+        });
+
     })
     
     console.log(app);
