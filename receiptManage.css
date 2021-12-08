@@ -10,6 +10,7 @@
     padding: 2rem;
     flex-wrap: wrap;
     min-width: min-content;
+    min-height: 240px
 }
 
 .content {
@@ -66,4 +67,23 @@ footer {
 
 section {
     margin-bottom: 195px
+}
+
+.receiptClear {
+    background:white;
+    color: #2E294E;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.75em;
+    border-radius: 30px;
+    border: 1px solid black;
+    padding:10px;
+    font-weight: 600;
+}
+
+.receiptClear:hover {
+    background:#f0a66d;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    /* -webkit-text-stroke: 1px black; */
 }

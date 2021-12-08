@@ -27,4 +27,10 @@ $(document).ready(function(){
         `)
     }
 
+
+    $('.receiptClear').click(function() {
+        localStorage.setItem('receiptArr', '[]');
+        page = [];
+        $('.receipt').remove()
+    })
 });
