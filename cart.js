@@ -79,7 +79,7 @@ function createPage(itemName, itemPrice, special, section) {
 
         $(section).last().after(`
             <tr class='item'>
-                <td><p class="itemName, test">${itemName}</p></td>
+                <td><p class="itemName test">${itemName}</p></td>
                 <td><p class="test">$${itemPrice}</p></td>
                 <td><textarea class="test">${special}</textarea/td>
                 <td><p class="xButton">X</p></td>
