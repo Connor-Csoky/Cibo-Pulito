@@ -5,10 +5,11 @@
     gap: 2rem;
     background-color: #ffcaa2;
     border: 1px solid black;
-    width: 80% ;
+    width: 80%;
     margin: 1rem auto;
     padding: 2rem;
     flex-wrap: wrap;
+    min-width: min-content;
 }
 
 .content {
@@ -21,7 +22,7 @@
 }
 
 .receipt {
-    min-width: fit-content;
+    min-width: 15rem;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -53,3 +54,16 @@
     margin: 1rem 0;
 }
 
+.hidden {
+    all: unset;
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+section {
+    margin-bottom: 195px
+}
