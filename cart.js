@@ -49,7 +49,7 @@ $(document).ready(function(){
     
             localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
             tempArr = []
-            $('.bg-modal').css('display', 'flex');
+            $('.firstM').css('display', 'flex');
             $('.btn-purchase').prop('disable', true);
             
         })
@@ -89,11 +89,39 @@ $(document).ready(function(){
         }
     });
     
+    $('input[name="ccc"]').click(function(){
+        console.log($('.spicy').prop("checked"))
+        console.log($('.veggy').prop("checked"))
+        if($('.spicy').prop("checked")){
+            $('.credit').css('display', 'inline')
+            $('.cvv').css('display', 'inline')
+            $('.date').css('display', 'inline')
+        }else if ($('.veggy').prop("checked")){
+            $('.credit').css('display', 'none')
+            $('.cvv').css('display', 'none')
+            $('.date').css('display', 'none')
+        }
+    })
+    
+    $('.btnClose').click(function(){
+        $('.firstM').css('display', 'none');
+        $('.receiptM').css('display', 'flex');
+    })
+
+    $('.btnFinal').click(function(){
+        $('.receiptM').css('display', 'none');
+        $('.secondM').css('display', 'flex');
+    })
+
+
+
 });
 
 const formatToCurrency = amount => {
     return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
 };
+
+
 
 function createPage(itemName, itemPrice, special, section) {
 
