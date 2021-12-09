@@ -60,7 +60,7 @@
                     <p class="cart-total-price"><strong class="cart-total-title">Total</strong>$<span class="cartTotal">0</span></p>
                 </div>
                 <div style="padding-bottom:25px;">
-                <button class="btn-purchase" type="button"><p>PURCHASE</p></button>
+                <button class="btn-purchase" type="button"><p>PROCEED TO PURCHASE</p></button>
                 </div>
             </div>
         </section>
@@ -80,16 +80,54 @@
             </div>
         </footer>
 
-        <div class="bg-modal">
+        <div class="bg-modal firstM">
+            <form class="modal" action="#">
+                <h2 class="selectH2">Select your payment</h2>
+                <input type="text" placeholder="Name">
+                <div><label for="spicy">Card</label><input type="radio" name="ccc" class="spicy"></input><label for="veggy">Cash</label><input type="radio" name="ccc" class="veggy"></input></div>
+                <input id="ccn" class="credit" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
+                <input type="date" class="date">
+                <input type="tel"placeholder="cvv" class="cvv" maxlength="3">
+                <a href="#" class="btnClose btnModal">PURCHASE</a>
+            </form>
+        </div>
+        <div class="bg-modal receiptM">
             <div class="modal">
-                <h2>Thanks for your purchase!</h2>
-                <a href="index.html" class="btnClose">Return to Home</a>
+                <div class="receipt">
+                    <h2>Receipt</h2>
+                    <p>Tel: 717-624-3598</p>
+                    <div class="dashed">
+                        <div class="priceDiv"><p>Mozzerella Sticks</p><p>9.99</p></div>
+                        <div class="priceDiv"><p>Italian Meatball</p><p>9.99</p></div>
+                        <div class="priceDiv"><p>Calzone</p><p>9.99</p></div>
+                    </div>
+                    <div class="total"><p>AMOUNT</p><p>$9.99</p></div>
+                </div>
+                <a href="#" class="btnAfter btnFinal">Finalize Order</a>
             </div>
         </div>
-
+        <div class="bg-modal secondM">
+            <div class="modal">
+                <h2 class="modal_h2">Thanks for your purchase!</h2>
+                <a href="index.html" class="btnClose btnAfter">Return to Home</a>
+            </div>
+        </div>
         <style>
             * {
                 transition: all 0.5s;
+            }
+            .credit, .date, .cvv {
+                display: none;
+            }
+            
+
+            .cvv {
+                width: 2rem;
+            }
+
+            .selectH2 {
+                font-size: 2rem;
+                text-align: center;
             }
 
             .hidden {
@@ -173,7 +211,7 @@
                 color: #333;
                 font-size: 1.4em;
             }
-
+            
             .btn-purchase {
                 background:white;
                 color: #2E294E;
@@ -240,15 +278,29 @@
                 justify-content: center;
                 background-color: white;
                 box-shadow: 2px 2px 10px black;
-                height: 15rem;
-                width: 20rem;
+                height: fit-content;
+                width: fit-content;
                 gap: 1rem;
+                padding: 1rem;
             }
-            .modal h2 {
+            .modal_h2 {
                 font-size: 2.3rem;
                 text-align: center;
             }
-            .modal a {
+
+
+
+            .btnModal {
+                padding: 3%;
+                font-size: 1.3rem;
+                border-radius: 25px;
+                text-decoration: none;
+                border: 1px solid black;
+                color:white;
+                background-color: black;
+            }
+
+            .btnAfter {
                 padding: 3%;
                 font-size: 2rem;
                 border-radius: 25px;
@@ -261,6 +313,39 @@
             .modal div {
                 display: flex;
                 gap: 2rem;
+            }
+            
+            .receipt {
+                min-width: 15rem;
+                display:flex;
+                justify-content: center;
+                flex-direction: column;
+                background-color: white;
+                border: 1px solid black;
+                padding: 1rem;
+                width: 20%;
+                text-align: center;
+            }
+
+            .priceDiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .total {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .dashed {
+                display:flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: .3rem;
+                border-top: 1px dashed black;
+                border-bottom: 1px dashed black;
+                padding: .5rem 0;
+                margin: 1rem 0;
             }
 
             @media screen and (max-width: 1000px) {
@@ -281,7 +366,6 @@
                     font-size: 80%;
                 }
             }
-
         </style>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
