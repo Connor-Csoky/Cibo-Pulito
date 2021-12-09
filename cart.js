@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    let cartItems = [], totalVal = 0, receiptArr = [], tempArr = [];
+    let cartItems = [], totalVal = 0, receiptArr = [], tempArr = [], arrLength = 0;
 
     if (localStorage.cartItems == null || localStorage.cartItems == undefined || localStorage.cartItems == '[]' || localStorage.cartItems.length == 0){ 
         localStorage.setItem("cartItems", '[]');
@@ -26,13 +26,15 @@ $(document).ready(function(){
                 'price' : cartItems[x].price
             })
         }
+        totalVal = formatToCurrency(totalVal)
         tempArr.push(currentOrder = {'total' : totalVal})
         $('.blank').css('display', 'none')
+    }else{
+        totalVal = formatToCurrency(totalVal)
     }
 
+    console.log(arrLength)
 
-
-    console.log(cartItems.length)
     $('.cartTotal').text(totalVal)
 
     if(cartItems.length == 0){
@@ -56,11 +58,25 @@ $(document).ready(function(){
     $('.xButton').click(function(){
         let temp = $(this).parent().siblings().find('.itemName').text()
         console.log(temp)
-
+        let funLock = false;
 
         for(let x = 0; x < cartItems.length; x++) {
-            if(cartItems[x].name == temp){
+            if(cartItems[x].name == temp && funLock == false){
+                funLock = true
+                arrLength = tempArr.length
+
+                tempArr[arrLength - 1].total -= cartItems[x].price
+                totalVal -= cartItems[x].price
+
+                totalVal = formatToCurrency(totalVal)
+                tempArr[arrLength - 1].total = formatToCurrency(tempArr[arrLength - 1].total)
+
+                $('.cartTotal').text(totalVal)
+
                 cartItems.splice(x, 1)
+                tempArr.splice(x, 1)
+                                
+                console.log(tempArr)
                 console.log(cartItems)
                 localStorage.setItem('cartItems', JSON.stringify(cartItems))
                 $(this).parent().parent().remove()
@@ -68,12 +84,16 @@ $(document).ready(function(){
                     $('.blank').css('display', 'contents')
                     $('.btn-purchase').prop('disable', true);  
                 }
+
             }
         }
     });
     
 });
 
+const formatToCurrency = amount => {
+    return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+};
 
 function createPage(itemName, itemPrice, special, section) {
 
