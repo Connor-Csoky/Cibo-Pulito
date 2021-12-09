@@ -116,7 +116,7 @@ function createPage(itemName, itemPrice, spicy, veggy, section) {
 
 const appDefault = [{
         "name" : "Mozzerella Sticks",
-        "price" : 9.99,
+        "price" : 7.99,
         "isSpicy" : false,
         "isVeggy" : true
     },
@@ -128,39 +128,39 @@ const appDefault = [{
     },
     {
         "name" : "Caprese Salad",
-        "price" : 9.99,
+        "price" : 8.99,
         "isSpicy" : false,
         "isVeggy" : true
     }] // End of App Section
 
 const saladDefault = [{
-        "name" : "Italian",
-        "price" : 9.99,
+        "name" : "Italian Salad",
+        "price" : 5.99,
         "isSpicy" : false,
         "isVeggy" : false
     },
     {
-        "name" : "Greek",
-        "price" : 9.99,
+        "name" : "Greek Salad",
+        "price" : 6.99,
         "isSpicy" : false,
         "isVeggy" : false
     },
     {
         "name" : "Meat Lover Salad",
-        "price" : 9.99,
+        "price" : 6.99,
         "isSpicy" : true,
         "isVeggy" : false
     }] // End of Salad Section
   
 const mainDefault = [{
         "name" : "Caponata",
-        "price" : 9.99,
+        "price" : 11.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
     {
         "name" : "Chicken Florentine Pasta",
-        "price" : 9.99,
+        "price" : 8.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
@@ -178,44 +178,44 @@ const mainDefault = [{
     },
     {
         "name" : "Pizzette with Prawns",
-        "price" : 9.99,
+        "price" : 11.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
     {
         "name" : "Chicken Parmesan",
-        "price" : 9.99,
+        "price" : 10.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
     {
         "name" : "Italian Meatball",
-        "price" : 9.99,
+        "price" : 5.99,
         "isSpicy" : true,
         "isVeggy" : false,
     },
     {
         "name" : "Calzone",
-        "price" : 9.99,
+        "price" : 12.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
     {
         "name" : "Caprese Chicken",
-        "price" : 9.99,
+        "price" : 12.99,
         "isSpicy" : false,
         "isVeggy" : false,
     },
     {
         "name" : "Rosemary Mushroom Risotto",
-        "price" : 9.99,
+        "price" : 13.99,
         "isSpicy" : false,
         "isVeggy" : false,
     }] // End of Main Section
 
 const pizzaDefault = [{
         "name": "Cheese Pizza",
-        "price": 9.99,
+        "price": 8.99,
         "isSpicy": false,
         "isVeggy": false,
     },
@@ -227,38 +227,38 @@ const pizzaDefault = [{
     },
     {
         "name": "Hawaian Pizza",
-        "price": 9.99,
+        "price": 12.99,
         "isSpicy": false,
         "isVeggy": false,
     },
     {
         "name": "Pizza Pie",
-        "price": 9.99,
+        "price": 11.99,
         "isSpicy": false,
         "isVeggy": false,
     },
     {
         "name": "Sausage Pizza",
-        "price": 9.99,
+        "price": 12.99,
         "isSpicy": false,
         "isVeggy": false,
     }] // End of Pizza Section
 
 const drinksDefault = [{
-        "name": "Rootbeer",
-        "price": 9.99,
+        "name": "Soft Drink",
+        "price": 2.55,
         "isSpicy": false,
         "isVeggy": false,
     },
     {
-        "name": "Coke",
-        "price": 9.99,
+        "name": "Tea",
+        "price": 3.25,
         "isSpicy": false,
         "isVeggy": false,
     },
     {
-        "name": "Sierra Mist",
-        "price": 9.99,
+        "name": "Water",
+        "price": 0.99,
         "isSpicy": false,
         "isVeggy": false,
     }] // End of Drinks Section

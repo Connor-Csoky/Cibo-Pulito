@@ -88,7 +88,9 @@
         </div>
 
         <style>
-            
+            * {
+                transition: all 0.5s;
+            }
 
             .hidden {
                 display: none;
@@ -111,10 +113,6 @@
                 cursor:default;
             }
 
-            .test {
-                transition: all .5s;
-            }
-
             textarea {
                 resize: none;
                 border: 1px dashed black;
@@ -125,7 +123,6 @@
 
             section {
                 margin-bottom: 195px;
-                transition: all .5s;
             }
           
             .section-background {
@@ -135,31 +132,8 @@
                 margin: 2rem auto;
                 min-width: min-content;
                 padding: 0 2rem;
-                transition: all .5s;
-                min-width: min-content;
-            }
-
-            @media screen and (max-width: 1000px) {
                 
-                .cart-total {
-                    font-size: 80%;
-                }
-    
-                .table {
-                    font-size: 80%;
-                }
-
-                .test {
-                    font-size: 80%;
-                }
-
-                .btn-purchase p {
-                    font-size: 80%;
-                }
-            }
-
-            .btn-purchase p {
-                transition: all .5s;
+                min-width: min-content;
             }
 
             .section-header {
@@ -179,14 +153,15 @@
             }
 
             .cart-total {
+                width: 87.5%;
+                margin: 0 auto;
                 text-align: end;
                 margin-top: 10px;
-                margin-right: 10px;
             }
 
             .cart-total-title {
                 font-weight: bold;
-                font-size: 1.5em;
+                font-size: 1.8em;
                 color: black;
                 margin-right: 20px;
                 color: #333;
@@ -196,7 +171,7 @@
 
             .cart-total-price {
                 color: #333;
-                font-size: 1.1em;
+                font-size: 1.4em;
             }
 
             .btn-purchase {
@@ -231,7 +206,7 @@
                 width: 87.5%;
                 margin: 0 auto;
                 background-color:white;
-                transition: all .5s;
+                
             }
 
             table, th, td {
@@ -287,6 +262,26 @@
                 display: flex;
                 gap: 2rem;
             }
+
+            @media screen and (max-width: 1000px) {
+                
+                .cart-total {
+                    font-size: 80%;
+                }
+    
+                .table {
+                    font-size: 80%;
+                }
+
+                .test {
+                    font-size: 80%;
+                }
+
+                .btn-purchase p {
+                    font-size: 80%;
+                }
+            }
+
         </style>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
