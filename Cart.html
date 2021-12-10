@@ -81,14 +81,14 @@
         </footer>
 
         <div class="bg-modal firstM">
-            <form class="modal" action="#">
+            <form class="modal" id="formID" action="">
                 <h2 class="selectH2">Select your payment</h2>
                 <input class="orderName" type="text" placeholder="Name" required>
                 <div><label for="spicy">Card</label><input type="radio" name="ccc" class="spicy"required></input><label for="veggy">Cash</label><input type="radio" name="ccc" class="veggy"required></input></div>
                 <input id="ccn" class="credit creditCard" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
-                <input type="date" class="date creditCard">
-                <input type="tel"placeholder="cvv creditCard" class="cvv" maxlength="3">
-                <input type="submit" class="btnClose btnModal" required>
+                <input type="month" class="date creditCard">
+                <input type="tel"placeholder="cvv" class="cvv creditCard" maxlength="3">
+                <input type="submit" class="btnClose btnModal">
             </form>
         </div>
         <div class="bg-modal receiptM">
@@ -97,11 +97,12 @@
                     <h2>Receipt</h2>
                     <p>Tel: 717-624-3598</p>
                     <div class="dashed">
-                        <div class="priceDiv"><p>Mozzerella Sticks</p><p>9.99</p></div>
+                        <!-- <div class="priceDiv"><p>Mozzerella Sticks</p><p>9.99</p></div>
                         <div class="priceDiv"><p>Italian Meatball</p><p>9.99</p></div>
-                        <div class="priceDiv"><p>Calzone</p><p>9.99</p></div>
+                        <div class="priceDiv"><p>Calzone</p><p>9.99</p></div> -->
                     </div>
-                    <div class="total"><p>AMOUNT</p><p>$9.99</p></div>
+                    <span class="totalSelector"></span>
+                    <!-- <div class="total"><p>AMOUNT</p><p>$9.99</p></div> -->
                 </div>
                 <a href="#" class="btnAfter btnFinal">Finalize Order</a>
             </div>
@@ -316,14 +317,15 @@
             }
             
             .receipt {
-                min-width: 15rem;
+                height: fit-content;
+                min-width: 17rem;
                 display:flex;
                 justify-content: center;
                 flex-direction: column;
                 background-color: white;
                 border: 1px solid black;
                 padding: 1rem;
-                width: 20%;
+                width: 25%;
                 text-align: center;
             }
 
@@ -338,14 +340,15 @@
             }
 
             .dashed {
+                max-height: 15rem;
                 display:flex;
-                justify-content: center;
+                justify-content: space-around;
                 flex-direction: column;
-                gap: .3rem;
                 border-top: 1px dashed black;
                 border-bottom: 1px dashed black;
-                padding: .5rem 0;
-                margin: 1rem 0;
+                padding: 0.5rem 0;
+                gap: 1rem !important;
+                overflow-y: auto;
             }
 
             @media screen and (max-width: 1000px) {
