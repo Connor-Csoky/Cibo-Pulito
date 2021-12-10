@@ -97,32 +97,62 @@ $(document).ready(function(){
         console.log($('.veggy').prop("checked"))
         if($('.spicy').prop("checked")){
             $('.credit').css('display', 'inline')
-            $('.credit').attr('required', 'true')
+            $('.credit').attr('required', true)
             
             $('.cvv').css('display', 'inline')
-            $('.cvv').attr('required', 'true')
+            $('.cvv').attr('required', true)
             
             $('.date').css('display', 'inline')
-            $('.date').attr('required', 'true')
+            $('.date').attr('required', true)
             
         }else if ($('.veggy').prop("checked")){
             $('.credit').css('display', 'none')
-            $('.credit').attr('required', 'false')
+            $('.credit').attr('required', false)
 
             $('.cvv').css('display', 'none')
-            $('.cvv').attr('required', 'false')
+            $('.cvv').attr('required', false)
 
             $('.date').css('display', 'none')
-            $('.date').attr('required', 'false')
+            $('.date').attr('required', false)
 
         }
     })
     
-    $('.btnClose').click(function(){
-        $('.firstM').css('display', 'none');
-        $('.receiptM').css('display', 'flex');
-    })
+    $(document).on('submit', '#formID', function() {
+        
+            if($('.spicy').prop("checked")){
+                if($('.creditCard').val() != "" && $('.credit').val().length == 16 && $('.cvv').val().length == 3){
+                    $('.firstM').css('display', 'none');
+                    $('.receiptM').css('display', 'flex');
+                    
+                }else{
+                    console.log("Input fields aren't complete")
+                    
+                }
+            }else if($('.veggy').prop("checked")){
+                
+                $('.firstM').css('display', 'none');
+                $('.receiptM').css('display', 'flex');
+                
+            }else{
+                console.log("CC or Cash not selected")
+                return false;
+            }
+        console.log(tempArr)
+        for(let x = 0; x < tempArr.length - 1; x++) {
+            $('.dashed').last().append(`
+            <div class="priceDiv"><p>${tempArr[x].name}</p><p>$${tempArr[x].price}</p></div>
+            `)
+            
+        }
+        $('.totalSelector').after(`
+            <div class="total"><p>AMOUNT</p><p>$${totalVal}</p></div>
 
+            `)
+        return false;
+        
+    });
+    
     $('.btnFinal').click(function(){
         $('.receiptM').css('display', 'none');
         $('.secondM').css('display', 'flex');
