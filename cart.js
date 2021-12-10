@@ -119,8 +119,15 @@ $(document).ready(function(){
     })
     
     $('.btnClose').click(function(){
-        $('.firstM').css('display', 'none');
-        $('.receiptM').css('display', 'flex');
+        if($('.orderName').val() != '' && ($('.spicy').prop("checked") == true || $('.veggy').prop("checked") == true) ){
+            if($('.spicy').prop("checked")){
+                
+            }else if($('.veggy').prop("checked")){
+                $('.firstM').css('display', 'none');
+                $('.receiptM').css('display', 'flex');
+
+            }
+        }
     })
 
     $('.btnFinal').click(function(){
