@@ -83,12 +83,12 @@
         <div class="bg-modal firstM">
             <form class="modal" action="#">
                 <h2 class="selectH2">Select your payment</h2>
-                <input type="text" placeholder="Name">
-                <div><label for="spicy">Card</label><input type="radio" name="ccc" class="spicy"></input><label for="veggy">Cash</label><input type="radio" name="ccc" class="veggy"></input></div>
-                <input id="ccn" class="credit" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
-                <input type="date" class="date">
-                <input type="tel"placeholder="cvv" class="cvv" maxlength="3">
-                <a href="#" class="btnClose btnModal">PURCHASE</a>
+                <input class="orderName" type="text" placeholder="Name" required>
+                <div><label for="spicy">Card</label><input type="radio" name="ccc" class="spicy"required></input><label for="veggy">Cash</label><input type="radio" name="ccc" class="veggy"required></input></div>
+                <input id="ccn" class="credit creditCard" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
+                <input type="date" class="date creditCard">
+                <input type="tel"placeholder="cvv creditCard" class="cvv" maxlength="3">
+                <input type="submit" class="btnClose btnModal" required>
             </form>
         </div>
         <div class="bg-modal receiptM">
@@ -109,7 +109,7 @@
         <div class="bg-modal secondM">
             <div class="modal">
                 <h2 class="modal_h2">Thanks for your purchase!</h2>
-                <a href="index.html" class="btnClose btnAfter">Return to Home</a>
+                <a href="index.html" class="btnAfter">Return to Home</a>
             </div>
         </div>
         <style>

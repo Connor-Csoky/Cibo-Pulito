@@ -43,14 +43,17 @@ $(document).ready(function(){
     }
     else {
         $('.btn-purchase').click(function() {
+            $('.firstM').css('display', 'flex');
+            $('.btn-purchase').prop('disable', true);
+            
+        })
+        $('.btnFinal').click(function() {
             localStorage.setItem('cartItems', '[]');
             cartItems = [];
             receiptArr.push(tempArr)
     
             localStorage.setItem('receiptArr', JSON.stringify(receiptArr))
             tempArr = []
-            $('.firstM').css('display', 'flex');
-            $('.btn-purchase').prop('disable', true);
             
         })
     }
@@ -94,12 +97,24 @@ $(document).ready(function(){
         console.log($('.veggy').prop("checked"))
         if($('.spicy').prop("checked")){
             $('.credit').css('display', 'inline')
+            $('.credit').attr('required', 'true')
+            
             $('.cvv').css('display', 'inline')
+            $('.cvv').attr('required', 'true')
+            
             $('.date').css('display', 'inline')
+            $('.date').attr('required', 'true')
+            
         }else if ($('.veggy').prop("checked")){
             $('.credit').css('display', 'none')
+            $('.credit').attr('required', 'false')
+
             $('.cvv').css('display', 'none')
+            $('.cvv').attr('required', 'false')
+
             $('.date').css('display', 'none')
+            $('.date').attr('required', 'false')
+
         }
     })
     
@@ -118,7 +133,7 @@ $(document).ready(function(){
 });
 
 const formatToCurrency = amount => {
-    return amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+    return amount.toFixed(2);
 };
 
 
