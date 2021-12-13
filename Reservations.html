@@ -29,23 +29,22 @@
         </header>
         
         <section style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(IMGS/MeatLoversSalad.jpg); background-repeat: no-repeat; background-size: cover;">
-                <div class="contact-flex" style="padding-top:50px; padding-bottom:50px;">
-                    <div style="background-color:#F3D9B1; width: 750px;">
-                        <h1 style="padding-top: 10px;"><center>Reservations</center></h1>
-                        <h2 style="padding-bottom:25px; padding-top:25px;"><center>Make a Reservation</center></h2>
-                        <p><center>Name</center></p>
-                        <center><input type="text"></center>
-                        <p style="padding-top: 25px;"><center>Email</center></p>
-                        <center><input type="text"></center>
-                        <p style="padding-top: 25px;"><center>Reservation Time</center></p>
-                        <center><input type="datetime-local"></center>
-                        <p style="padding-top: 25px;"><center>Message</center></p>
-                        <center><textarea></textarea></center>
-                        <div style="padding-top: 25px; padding-bottom:25px; margin: 0 auto; text-align:center;">
-                            <center><button class="button-style">Send Message</button></center>
-                        </div>
+            <div class="contact-flex" style="padding-top:50px; padding-bottom:50px;">
+                <form style="background-color:#F3D9B1; width: 750px;">
+                    <h1 style="padding-bottom:25px; padding-top:25px;">Make a Reservation</h1>
+                    <p>Name</p>
+                    <input type="text" required>
+                    <p style="padding-top: 25px;">Email</p>
+                    <input type="email" required>
+                    <p style="padding-top: 25px;">Reservation Time</p>
+                    <input type="datetime-local" required>
+                    <p style="padding-top: 25px;">Message</p>
+                    <textarea></textarea>
+                    <div style="padding-top: 25px; padding-bottom:25px; margin: 0 auto; text-align:center;">
+                        <button type="submit" class="button-style">Send Message</button>
                     </div>
-                </div>      
+                </form>
+            </div>      
         </section>
         
         <footer>
@@ -100,11 +99,22 @@
             }
 
             input {
-                width: 200px;
+                width: 250px;
                 border-radius: 25px;
                 padding: 15px;
                 border: 1px solid black;
             }
+
+            form * {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
         </style>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
