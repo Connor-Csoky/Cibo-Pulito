@@ -96,48 +96,80 @@ $(document).ready(function(){
         console.log($('.spicy').prop("checked"))
         console.log($('.veggy').prop("checked"))
         if($('.spicy').prop("checked")){
-            $('.credit').css('display', 'inline')
-            $('.credit').attr('required', true)
-            
-            $('.cvv').css('display', 'inline')
-            $('.cvv').attr('required', true)
-            
-            $('.date').css('display', 'inline')
-            $('.date').attr('required', true)
+            $('.creditCard').css('display', 'inline')
+            $('.creditCard').attr('required', true)
             
         }else if ($('.veggy').prop("checked")){
-            $('.credit').css('display', 'none')
-            $('.credit').attr('required', false)
-
-            $('.cvv').css('display', 'none')
-            $('.cvv').attr('required', false)
-
-            $('.date').css('display', 'none')
-            $('.date').attr('required', false)
+            $('.creditCard').css('display', 'none')
+            $('.creditCard').attr('required', false)
 
         }
     })
     
     $(document).on('submit', '#formID', function() {
         
-            if($('.spicy').prop("checked")){
-                if($('.creditCard').val() != "" && $('.credit').val().length == 16 && $('.cvv').val().length == 3){
-                    $('.firstM').css('display', 'none');
-                    $('.receiptM').css('display', 'flex');
-                    
-                }else{
-                    console.log("Input fields aren't complete")
-                    
-                }
-            }else if($('.veggy').prop("checked")){
-                
+        if($('.spicy').prop("checked")){
+            if($('.creditCard').val() != "" && $('.credit').val().length == 16 && $('.cvv').val().length == 3 && ($(".tipNo").prop("checked") || $(".tip10").prop("checked") || $(".tip15").prop("checked") || $(".tip20").prop("checked"))){
                 $('.firstM').css('display', 'none');
                 $('.receiptM').css('display', 'flex');
                 
             }else{
-                console.log("CC or Cash not selected")
-                return false;
+                console.log("Input fields aren't complete")
+                
             }
+        }else if($('.veggy').prop("checked")){
+            
+            $('.firstM').css('display', 'none');
+            $('.receiptM').css('display', 'flex');
+            
+        }else{
+            console.log("CC or Cash not selected")
+            return false;
+        }
+
+        let tip = 0, tipVal = 0;
+
+        
+        totalVal = Number(totalVal)
+        
+        if($(".tipNo").prop("checked")){
+            tip = 0;
+            
+            tempArr.splice(tempArr.length - 1, 0, {"name" : "Tip", "price" : formatToCurrency(tipVal)})
+        }else if($(".tip10").prop("checked")){
+            tip = 0.10;
+            
+            tipVal = totalVal * tip;
+            totalVal += tipVal;  
+            
+            totalVal = formatToCurrency(totalVal)
+            
+            tempArr.splice(tempArr.length - 1, 0, {"name" : "Tip", "price" : formatToCurrency(tipVal)})
+        }else if($(".tip15").prop("checked")){
+            tip = 0.15;
+            
+            tipVal = totalVal * tip;
+            totalVal += tipVal;  
+            
+            totalVal = formatToCurrency(totalVal)
+            
+            tempArr.splice(tempArr.length - 1, 0, {"name" : "Tip", "price" : formatToCurrency(tipVal)})
+        }else if($(".tip20").prop("checked")){
+            tip = 0.2;
+            
+            tipVal = totalVal * tip;
+            totalVal += tipVal;  
+            
+            totalVal = formatToCurrency(totalVal)
+
+            tempArr.splice(tempArr.length - 1, 0, {"name" : "Tip", "price" : formatToCurrency(tipVal)})
+        }else{
+            return false;
+        }
+        arrLength = tempArr.length
+        
+        tempArr[arrLength - 1].total = totalVal
+        
         console.log(tempArr)
         for(let x = 0; x < tempArr.length - 1; x++) {
             $('.dashed').last().append(`
@@ -149,6 +181,7 @@ $(document).ready(function(){
             <div class="total"><p>AMOUNT</p><p>$${totalVal}</p></div>
 
             `)
+            
         return false;
         
     });

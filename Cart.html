@@ -88,6 +88,17 @@
                 <input id="ccn" class="credit creditCard" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="16" placeholder="xxxx xxxx xxxx xxxx">
                 <input type="month" class="date creditCard">
                 <input type="tel"placeholder="cvv" class="cvv creditCard" maxlength="3">
+                <label for="tip" class="creditCard">TIP</label>
+                <div class="tipper">
+                    <label class="creditCard">None</label>
+                    <input class="tip creditCard tipNo" type="radio" name="tip" required>
+                    <label class="creditCard">10%</label>
+                    <input class="tip creditCard tip10" type="radio" name="tip" required>
+                    <label class="creditCard">15%</label>
+                    <input class="tip creditCard tip15" type="radio" name="tip" required>
+                    <label class="creditCard">20%</label>
+                    <input class="tip creditCard tip20" type="radio" name="tip" required>
+                </div>
                 <input type="submit" class="btnClose btnModal">
             </form>
         </div>
@@ -117,7 +128,26 @@
             * {
                 transition: all 0.5s;
             }
-            .credit, .date, .cvv {
+
+            .tipper {
+                all: unset;
+                margin: 0 auto;
+                width: 50%;
+                height: fit-content;
+                display: grid !important;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                justify-content: center;
+                align-items: center;
+                grid-gap: 0;
+            }
+            .tipper * {
+                line-height: 0px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .creditCard {
                 display: none;
             }
             
