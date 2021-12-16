@@ -74,6 +74,8 @@ function findItem() {
             $('.form').attr('action', 'index.html')
             localStorage.setItem('currentLogin', user)
             window.alert('Successful Login')
+        }else{
+            window.alert("Invalid Login");
         }
     }else{
         $('.form').attr('action', '#')
